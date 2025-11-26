@@ -1,0 +1,179 @@
+package final_project;
+
+import java.awt.EventQueue;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.Font;
+import javax.swing.JTextField;
+import java.awt.Rectangle;
+import javax.swing.JButton;
+
+public class Consulta extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private JLabel lblNewLabel;
+	private JTextField textField;
+	private JLabel lblModelo;
+	private JTextField textField_1;
+	private JLabel lblFabricante;
+	private JTextField textField_2;
+	private JLabel lblSerie;
+	private JTextField textField_3;
+	private JLabel lblArquitectura;
+	private JTextField textField_4;
+	private JLabel lblSocket;
+	private JTextField textField_5;
+	private JLabel lblNucleos;
+	private JTextField textField_6;
+	private JLabel lblHilos;
+	private JTextField textField_7;
+	private JLabel lblPerformance;
+	private JTextField textField_8;
+	private JLabel lblIncludesCooler;
+	private JTextField textField_9;
+	private JTextField textField_10;
+	private JLabel lblIntegrated;
+	private JButton btnNewButton;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Consulta dialog = new Consulta();
+					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					dialog.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public Consulta() {
+		setBounds(100, 100, 450, 410);
+		getContentPane().setLayout(null);
+		
+		lblNewLabel = new JLabel("Modelo:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(10, 11, 134, 14);
+		getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(154, 8, 270, 20);
+		getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		lblModelo = new JLabel("Precio");
+		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblModelo.setBounds(10, 39, 134, 14);
+		getContentPane().add(lblModelo);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(154, 36, 270, 20);
+		getContentPane().add(textField_1);
+		
+		lblFabricante = new JLabel("Fabricante");
+		lblFabricante.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblFabricante.setBounds(10, 67, 134, 14);
+		getContentPane().add(lblFabricante);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(154, 64, 270, 20);
+		getContentPane().add(textField_2);
+		
+		lblSerie = new JLabel("Serie");
+		lblSerie.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblSerie.setBounds(10, 95, 134, 14);
+		getContentPane().add(lblSerie);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(154, 92, 270, 20);
+		getContentPane().add(textField_3);
+		
+		lblArquitectura = new JLabel("Arquitectura");
+		lblArquitectura.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblArquitectura.setBounds(10, 123, 134, 14);
+		getContentPane().add(lblArquitectura);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(154, 120, 270, 20);
+		getContentPane().add(textField_4);
+		
+		lblSocket = new JLabel("Socket");
+		lblSocket.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblSocket.setBounds(10, 151, 134, 14);
+		getContentPane().add(lblSocket);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(154, 148, 270, 20);
+		getContentPane().add(textField_5);
+		
+		lblNucleos = new JLabel("Nucleos");
+		lblNucleos.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNucleos.setBounds(10, 179, 134, 14);
+		getContentPane().add(lblNucleos);
+		
+		textField_6 = new JTextField();
+		textField_6.setColumns(10);
+		textField_6.setBounds(154, 176, 270, 20);
+		getContentPane().add(textField_6);
+		
+		lblHilos = new JLabel("Hilos");
+		lblHilos.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblHilos.setBounds(10, 207, 134, 14);
+		getContentPane().add(lblHilos);
+		
+		textField_7 = new JTextField();
+		textField_7.setColumns(10);
+		textField_7.setBounds(154, 204, 270, 20);
+		getContentPane().add(textField_7);
+		
+		lblPerformance = new JLabel("Perform. Core clock");
+		lblPerformance.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblPerformance.setBounds(10, 235, 134, 14);
+		getContentPane().add(lblPerformance);
+		
+		textField_8 = new JTextField();
+		textField_8.setColumns(10);
+		textField_8.setBounds(154, 232, 270, 20);
+		getContentPane().add(textField_8);
+		
+		lblIncludesCooler = new JLabel("Incluye Cooler");
+		lblIncludesCooler.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblIncludesCooler.setBounds(10, 263, 134, 14);
+		getContentPane().add(lblIncludesCooler);
+		
+		textField_9 = new JTextField();
+		textField_9.setColumns(10);
+		textField_9.setBounds(154, 260, 270, 20);
+		getContentPane().add(textField_9);
+		
+		textField_10 = new JTextField();
+		textField_10.setColumns(10);
+		textField_10.setBounds(154, 288, 270, 20);
+		getContentPane().add(textField_10);
+		
+		lblIntegrated = new JLabel("Graficos Integrados");
+		lblIntegrated.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblIntegrated.setBounds(10, 291, 134, 14);
+		getContentPane().add(lblIntegrated);
+		
+		btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(10, 319, 414, 41);
+		getContentPane().add(btnNewButton);
+
+	}
+}
