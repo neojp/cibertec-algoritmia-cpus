@@ -74,6 +74,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnMantenimiento.add(mntmEdición);
 		
 		mntmLista = new JMenuItem("Listar procesadores");
+		mntmLista.addActionListener(this);
 		mnMantenimiento.add(mntmLista);
 		
 		mnVentas = new JMenu("Ventas");
@@ -89,6 +90,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnConfig.add(mntmConfDesc);
 		
 		mntmConfObseq = new JMenuItem("Configurar obsequios");
+		mntmConfObseq.addActionListener(this);
 		mnConfig.add(mntmConfObseq);
 		
 		mnAyuda = new JMenu("Ayuda");
@@ -103,6 +105,12 @@ public class Principal extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mntmConfObseq) {
+			actionPerformedMntmConfObseq(e);
+		}
+		if (e.getSource() == mntmLista) {
+			actionPerformedMntmLista(e);
+		}
 		if (e.getSource() == mntmConsulta) {
 			actionPerformedMntmConsulta(e);
 		}
@@ -117,5 +125,15 @@ public class Principal extends JFrame implements ActionListener {
 		Consulta consult1 = new Consulta();
 		consult1.setLocationRelativeTo(this);
 		consult1.setVisible(true);
+	}
+	protected void actionPerformedMntmLista(ActionEvent e) {
+		Listar list1 = new Listar();
+		list1.setLocationRelativeTo(this);
+		list1.setVisible(true);
+	}
+	protected void actionPerformedMntmConfObseq(ActionEvent e) {
+		ConfigurarObsequios confObs1 = new ConfigurarObsequios();
+		confObs1.setLocationRelativeTo(this);
+		confObs1.setVisible(true);
 	}
 }
