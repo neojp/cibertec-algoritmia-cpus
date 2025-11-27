@@ -81,6 +81,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnBar.add(mnVentas);
 		
 		mntmVender = new JMenuItem("Vender");
+		mntmVender.addActionListener(this);
 		mnVentas.add(mntmVender);
 		
 		mnConfig = new JMenu("Configuracíón");
@@ -97,6 +98,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnBar.add(mnAyuda);
 		
 		mntmAcerca = new JMenuItem("Acerca de tienda");
+		mntmAcerca.addActionListener(this);
 		mnAyuda.add(mntmAcerca);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -105,6 +107,12 @@ public class Principal extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mntmAcerca) {
+			actionPerformedMntmAcerca(e);
+		}
+		if (e.getSource() == mntmVender) {
+			actionPerformedMntmVender(e);
+		}
 		if (e.getSource() == mntmConfObseq) {
 			actionPerformedMntmConfObseq(e);
 		}
@@ -135,5 +143,17 @@ public class Principal extends JFrame implements ActionListener {
 		ConfigurarObsequios confObs1 = new ConfigurarObsequios();
 		confObs1.setLocationRelativeTo(this);
 		confObs1.setVisible(true);
+	}
+	protected void actionPerformedMntmVender(ActionEvent e) 
+	{Ventas vent=new Ventas();
+		vent.setLocationRelativeTo(this);
+		vent.setVisible(true);
+			}
+	
+	protected void actionPerformedMntmAcerca(ActionEvent e) 
+	{Acerca acer=new Acerca();
+		acer.setLocationRelativeTo(this);
+					acer.setVisible(true);
+		
 	}
 }
