@@ -9,8 +9,10 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Descuento extends JDialog {
+public class Descuento extends JDialog implements ActionListener {
 	private JLabel lblRangoDesc1;
 	private JLabel lblRangoDesc2;
 	private JLabel lblRangoDesc3;
@@ -100,11 +102,26 @@ public class Descuento extends JDialog {
 		getContentPane().add(lblPorcenRan4);
 		
 		btnAceptarDesc = new JButton("Aceptar");
+		btnAceptarDesc.addActionListener(this);
 		btnAceptarDesc.setBounds(317, 26, 89, 23);
 		getContentPane().add(btnAceptarDesc);
 		
 		btnCancelarDesc = new JButton("Cancelar");
+		btnCancelarDesc.addActionListener(this);
 		btnCancelarDesc.setBounds(317, 58, 89, 23);
 		getContentPane().add(btnCancelarDesc);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnCancelarDesc) {
+			actionPerformedBtnCancelarDesc(e);
+		}
+		if (e.getSource() == btnAceptarDesc) {
+			actionPerformedBtnAceptarDesc(e);
+		}
+	}
+	protected void actionPerformedBtnAceptarDesc(ActionEvent e) {
+	}
+	protected void actionPerformedBtnCancelarDesc(ActionEvent e) {
+		dispose();
 	}
 }

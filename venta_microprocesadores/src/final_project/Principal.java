@@ -51,7 +51,7 @@ public class Principal extends JFrame implements ActionListener {
 	 */
 	public Principal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 691, 500);
 		
 		mnBar = new JMenuBar();
 		setJMenuBar(mnBar);
@@ -71,6 +71,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnMantenimiento.add(mntmConsulta);
 		
 		mntmEdición = new JMenuItem("Modificar procesador");
+		mntmEdición.addActionListener(this);
 		mnMantenimiento.add(mntmEdición);
 		
 		mntmLista = new JMenuItem("Listar procesadores");
@@ -88,6 +89,7 @@ public class Principal extends JFrame implements ActionListener {
 		mnBar.add(mnConfig);
 		
 		mntmConfDesc = new JMenuItem("Configurar descuentos");
+		mntmConfDesc.addActionListener(this);
 		mnConfig.add(mntmConfDesc);
 		
 		mntmConfObseq = new JMenuItem("Configurar obsequios");
@@ -107,6 +109,12 @@ public class Principal extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mntmEdición) {
+			actionPerformedMntmEdición(e);
+		}
+		if (e.getSource() == mntmConfDesc) {
+			actionPerformedMntmConfDesc(e);
+		}
 		if (e.getSource() == mntmAcerca) {
 			actionPerformedMntmAcerca(e);
 		}
@@ -155,5 +163,15 @@ public class Principal extends JFrame implements ActionListener {
 		acer.setLocationRelativeTo(this);
 					acer.setVisible(true);
 		
+	}
+	protected void actionPerformedMntmConfDesc(ActionEvent e) {
+		Descuento desc = new Descuento();
+		desc.setLocationRelativeTo(this);
+		desc.setVisible(true);
+	}
+	protected void actionPerformedMntmEdición(ActionEvent e) {
+		Modificar modif = new Modificar();
+		modif.setLocationRelativeTo(this);
+		modif.setVisible(true);
 	}
 }
