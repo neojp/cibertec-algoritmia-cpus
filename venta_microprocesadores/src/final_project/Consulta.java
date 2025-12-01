@@ -30,8 +30,8 @@ public class Consulta extends JDialog implements ActionListener {
 	private JTextField txtHilos;
 	private JLabel lblVelNucleos;
 	private JTextField txtVelNucleos;
-	private JTextField txtGraficosIntegrados;
-	private JLabel lblGraficosIntegrados;
+	private JTextField txtGraficos;
+	private JLabel lblGraficos;
 	private JButton btnCancel;
 	private JComboBox cboModelo;
 
@@ -130,16 +130,16 @@ public class Consulta extends JDialog implements ActionListener {
 		txtVelNucleos.setBounds(154, 176, 270, 20);
 		getContentPane().add(txtVelNucleos);
 		
-		txtGraficosIntegrados = new JTextField();
-		txtGraficosIntegrados.setEditable(false);
-		txtGraficosIntegrados.setColumns(10);
-		txtGraficosIntegrados.setBounds(154, 204, 270, 20);
-		getContentPane().add(txtGraficosIntegrados);
+		txtGraficos = new JTextField();
+		txtGraficos.setEditable(false);
+		txtGraficos.setColumns(10);
+		txtGraficos.setBounds(154, 204, 270, 20);
+		getContentPane().add(txtGraficos);
 		
-		lblGraficosIntegrados = new JLabel("Graficos Integrados");
-		lblGraficosIntegrados.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblGraficosIntegrados.setBounds(10, 206, 134, 17);
-		getContentPane().add(lblGraficosIntegrados);
+		lblGraficos = new JLabel("Graficos Integrados");
+		lblGraficos.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblGraficos.setBounds(10, 206, 134, 17);
+		getContentPane().add(lblGraficos);
 		
 		btnCancel = new JButton("CANCELAR");
 		btnCancel.addActionListener(this);

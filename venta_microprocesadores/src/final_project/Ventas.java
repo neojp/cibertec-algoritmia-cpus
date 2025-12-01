@@ -17,11 +17,11 @@ public class Ventas extends JDialog implements ActionListener {
 	private JLabel lblCantidad;
 	private JTextField txtPrecio;
 	private JTextField txtCantidad;
-	private JComboBox cmbModelo;
+	private JComboBox cboModelo;
 	private JButton btnVender;
 	private JButton btnCerrar;
-	private JScrollPane scrollPane;
-	private JTextArea textArea;
+	private JScrollPane scp;
+	private JTextArea txtS;
 
 	/**
 	 * Launch the application.
@@ -68,9 +68,9 @@ public class Ventas extends JDialog implements ActionListener {
 		getContentPane().add(txtCantidad);
 		txtCantidad.setColumns(10);
 		
-		cmbModelo = new JComboBox();
-		cmbModelo.setBounds(100, 21, 148, 22);
-		getContentPane().add(cmbModelo);
+		cboModelo = new JComboBox();
+		cboModelo.setBounds(100, 21, 148, 22);
+		getContentPane().add(cboModelo);
 		
 		btnVender = new JButton("Vender");
 		btnVender.setBounds(314, 25, 89, 23);
@@ -81,12 +81,12 @@ public class Ventas extends JDialog implements ActionListener {
 		btnCerrar.setBounds(314, 51, 89, 23);
 		getContentPane().add(btnCerrar);
 		
-		scrollPane = new JScrollPane();
-		scrollPane.setBounds(23, 106, 380, 148);
-		getContentPane().add(scrollPane);
+		scp = new JScrollPane();
+		scp.setBounds(23, 106, 380, 148);
+		getContentPane().add(scp);
 		
-		textArea = new JTextArea();
-		scrollPane.setViewportView(textArea);
+		txtS = new JTextArea();
+		scp.setViewportView(txtS);
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnCerrar) {

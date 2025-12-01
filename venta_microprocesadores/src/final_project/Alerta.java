@@ -1,4 +1,4 @@
-package gui;
+package final_project;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -74,5 +74,6 @@ public class Alerta extends JDialog implements ActionListener {
 		}
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		dispose();
 	}
 }
