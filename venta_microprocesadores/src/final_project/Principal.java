@@ -140,38 +140,45 @@ public class Principal extends JFrame implements ActionListener {
 	protected void actionPerformedMntmConsulta(ActionEvent e) {
 		Consulta consult1 = new Consulta();
 		consult1.setLocationRelativeTo(this);
+		consult1.setModal(true);
 		consult1.setVisible(true);
 	}
 	protected void actionPerformedMntmLista(ActionEvent e) {
 		Listar list1 = new Listar();
 		list1.setLocationRelativeTo(this);
+		list1.setModal(true);
 		list1.setVisible(true);
 	}
 	protected void actionPerformedMntmConfObseq(ActionEvent e) {
 		ConfigurarObsequios confObs1 = new ConfigurarObsequios();
 		confObs1.setLocationRelativeTo(this);
+		confObs1.setModal(true);
 		confObs1.setVisible(true);
 	}
 	protected void actionPerformedMntmVender(ActionEvent e) 
 	{Ventas vent=new Ventas();
 		vent.setLocationRelativeTo(this);
+		vent.setModal(true);
 		vent.setVisible(true);
 			}
 	
 	protected void actionPerformedMntmAcerca(ActionEvent e) 
 	{Acerca acer=new Acerca();
 		acer.setLocationRelativeTo(this);
+		acer.setModal(true);
 					acer.setVisible(true);
 		
 	}
 	protected void actionPerformedMntmConfDesc(ActionEvent e) {
 		Descuento desc = new Descuento();
 		desc.setLocationRelativeTo(this);
+		desc.setModal(true);
 		desc.setVisible(true);
 	}
 	protected void actionPerformedMntmEdición(ActionEvent e) {
 		Modificar modif = new Modificar();
 		modif.setLocationRelativeTo(this);
+		modif.setModal(true);
 		modif.setVisible(true);
 	}
 }
