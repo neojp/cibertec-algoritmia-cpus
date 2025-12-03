@@ -23,13 +23,25 @@ public class Principal extends JFrame implements ActionListener {
 	private JMenu mnAyuda;
 	private JMenuItem mntmSalir;
 	private JMenuItem mntmConsulta;
-	private JMenuItem mntmEdición;
+	private JMenuItem mntmEdicion;
 	private JMenuItem mntmLista;
 	private JMenuItem mntmVender;
 	private JMenuItem mntmConfDesc;
 	private JMenuItem mntmConfObseq;
 	private JMenuItem mntmAcerca;
-
+	
+	// informacion de microprocesadores (por ahora solo modelos):
+	public String modelo1 = "AMD Ryzen 7 5700X";
+	public String modelo2 = "Intel Core i5-11400F";
+	public String modelo3 = "Intel Core i5-14600K";
+	public String modelo4 = "Intel Core i9-12900KF";
+	public String modelo5 = "AMD Ryzen 7 9800X3D";
+	public String modelo6 = "AMD Ryzen 9 5900X";
+	public String modelo7 = "Intel Pentium Gold 6500";
+	public String modelo8 = "Intel Core Ultra 7 265KF";
+	public String modelo9 = "AMD Ryzen 5 9600X";
+	public String modelo10 = "AMD Ryzen 9 9950X3D";
+	
 	/**
 	 * Launch the application.
 	 */
@@ -50,6 +62,7 @@ public class Principal extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public Principal() {
+		setTitle("Tienda de microprocesadores");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 691, 500);
 		
@@ -70,9 +83,9 @@ public class Principal extends JFrame implements ActionListener {
 		mntmConsulta.addActionListener(this);
 		mnMantenimiento.add(mntmConsulta);
 		
-		mntmEdición = new JMenuItem("Modificar procesador");
-		mntmEdición.addActionListener(this);
-		mnMantenimiento.add(mntmEdición);
+		mntmEdicion = new JMenuItem("Modificar procesador");
+		mntmEdicion.addActionListener(this);
+		mnMantenimiento.add(mntmEdicion);
 		
 		mntmLista = new JMenuItem("Listar procesadores");
 		mntmLista.addActionListener(this);
@@ -103,13 +116,12 @@ public class Principal extends JFrame implements ActionListener {
 		mntmAcerca.addActionListener(this);
 		mnAyuda.add(mntmAcerca);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == mntmEdición) {
+		if (e.getSource() == mntmEdicion) {
 			actionPerformedMntmEdición(e);
 		}
 		if (e.getSource() == mntmConfDesc) {

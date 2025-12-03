@@ -4,10 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
+//import java.awt.BorderLayout;
 import java.awt.Font;
 import javax.swing.JTextField;
-import java.awt.Rectangle;
+//import java.awt.Rectangle;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -33,7 +33,7 @@ public class Consulta extends JDialog implements ActionListener {
 	private JTextField txtGraficos;
 	private JLabel lblGraficos;
 	private JButton btnCancel;
-	private JComboBox cboModelo;
+	private JComboBox<String> cboModelo;
 
 	/**
 	 * Launch the application.
@@ -56,6 +56,7 @@ public class Consulta extends JDialog implements ActionListener {
 	 * Create the dialog.
 	 */
 	public Consulta() {
+		setTitle("Consultar");
 		setBounds(100, 100, 450, 321);
 		getContentPane().setLayout(null);
 		
@@ -149,8 +150,19 @@ public class Consulta extends JDialog implements ActionListener {
 		btnCancel.setBounds(10, 235, 414, 41);
 		getContentPane().add(btnCancel);
 		
-		cboModelo = new JComboBox();
+		cboModelo = new JComboBox<String>();
 		cboModelo.setBounds(154, 6, 270, 22);
+		Principal princ = new Principal();
+		cboModelo.addItem(princ.modelo1);
+		cboModelo.addItem(princ.modelo2);
+		cboModelo.addItem(princ.modelo3);
+		cboModelo.addItem(princ.modelo4);
+		cboModelo.addItem(princ.modelo5);
+		cboModelo.addItem(princ.modelo6);
+		cboModelo.addItem(princ.modelo7);
+		cboModelo.addItem(princ.modelo8);
+		cboModelo.addItem(princ.modelo9);
+		cboModelo.addItem(princ.modelo10);
 		getContentPane().add(cboModelo);
 
 	}

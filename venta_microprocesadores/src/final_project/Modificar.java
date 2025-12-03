@@ -33,7 +33,7 @@ public class Modificar extends JDialog implements ActionListener {
 	private JTextField txtGraficosIntegrados;
 	private JLabel lblGraficosIntegrados;
 	private JButton btnCancelar;
-	private JComboBox cboModelo;
+	private JComboBox<String> cboModelo;
 	private JButton btnGuardar;
 
 	/**
@@ -144,8 +144,19 @@ public class Modificar extends JDialog implements ActionListener {
 		btnCancelar.setBounds(10, 235, 197, 41);
 		getContentPane().add(btnCancelar);
 		
-		cboModelo = new JComboBox();
+		cboModelo = new JComboBox<String>();
 		cboModelo.setBounds(154, 6, 270, 22);
+		Principal princ = new Principal();
+		cboModelo.addItem(princ.modelo1);
+		cboModelo.addItem(princ.modelo2);
+		cboModelo.addItem(princ.modelo3);
+		cboModelo.addItem(princ.modelo4);
+		cboModelo.addItem(princ.modelo5);
+		cboModelo.addItem(princ.modelo6);
+		cboModelo.addItem(princ.modelo7);
+		cboModelo.addItem(princ.modelo8);
+		cboModelo.addItem(princ.modelo9);
+		cboModelo.addItem(princ.modelo10);
 		getContentPane().add(cboModelo);
 		
 		btnGuardar = new JButton("GUARDAR");

@@ -17,7 +17,7 @@ public class Ventas extends JDialog implements ActionListener {
 	private JLabel lblCantidad;
 	private JTextField txtPrecio;
 	private JTextField txtCantidad;
-	private JComboBox cboModelo;
+	private JComboBox <String>cboModelo;
 	private JButton btnVender;
 	private JButton btnCerrar;
 	private JScrollPane scp;
@@ -68,8 +68,19 @@ public class Ventas extends JDialog implements ActionListener {
 		getContentPane().add(txtCantidad);
 		txtCantidad.setColumns(10);
 		
-		cboModelo = new JComboBox();
+		cboModelo = new JComboBox<String>();
 		cboModelo.setBounds(100, 21, 148, 22);
+		Principal princ = new Principal();
+		cboModelo.addItem(princ.modelo1);
+		cboModelo.addItem(princ.modelo2);
+		cboModelo.addItem(princ.modelo3);
+		cboModelo.addItem(princ.modelo4);
+		cboModelo.addItem(princ.modelo5);
+		cboModelo.addItem(princ.modelo6);
+		cboModelo.addItem(princ.modelo7);
+		cboModelo.addItem(princ.modelo8);
+		cboModelo.addItem(princ.modelo9);
+		cboModelo.addItem(princ.modelo10);
 		getContentPane().add(cboModelo);
 		
 		btnVender = new JButton("Vender");
