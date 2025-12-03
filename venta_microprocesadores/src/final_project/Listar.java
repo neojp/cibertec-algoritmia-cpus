@@ -75,14 +75,97 @@ public class Listar extends JDialog implements ActionListener {
 		dispose();
 	}
 	protected void actionPerformedBtnListar(ActionEvent e) {
+		Principal princ = new Principal();
+
 		txtS.setText("LISTADO DE MICROPROCESADORES \n\n");
-		txtS.append("Nombre: \n");
+		txtS.append("Nombre: " + princ.modelo1 + "\n");
 		txtS.append("Precio: \n");
 		txtS.append("Fabricante: \n");
 		txtS.append("Número de Núcleos: \n");
 		txtS.append("Número de Hilos: \n");
 		txtS.append("Velocidad de Núcleos: \n");
 		txtS.append("Tarjeta de Video Integrada: \n");
-		txtS.append("\n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo2 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo3 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo4 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo5 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo6 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo7 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo8 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo9 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
+		
+		txtS.append("Nombre: " + princ.modelo10 + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("\n\n");
 	}
 }
