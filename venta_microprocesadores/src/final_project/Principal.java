@@ -31,35 +31,48 @@ public class Principal extends JFrame implements ActionListener {
 	private JMenuItem mntmAcerca;
 	
 	// información de microprocesadores:
+	// braulio
 	public String modelo1 = "AMD Ryzen 7 5700X";
 	public String modelo2 = "Intel Core i5-11400F";
+	
+	// Donnie
 	public String modelo3 = "Intel Core i5-14600K";
 	
-	// Joan
+	// Donnie
 	public String modelo4 = "Intel Core i9-12900KF";
-	public double precio4 = 449;
-	public String fabricante4 = "AMD";
-	public String series4 = "AMD Ryzen 7";
-	public int nucleos4 = 8;
-	public int hilos4 = 16;
-	public double velocidad4 = 4.7;
-	public char video4 = 1;
 	
 	// Joan
 	public String modelo5 = "AMD Ryzen 7 9800X3D";
-	public double precio5 = 228.5;
+	public double precio5 = 449;
 	public String fabricante5 = "AMD";
-	public String series5 = "AMD Ryzen 9";
-	public int nucleos5 = 12;
-	public int hilos5 = 24;
-	public double velocidad5 = 3.7;
-	public char video5 = 0;
+	public String series5 = "AMD Ryzen 7";
+	public int nucleos5 = 8;
+	public int hilos5 = 16;
+	public double velocidad5 = 4.7;
+	public char video5 = 1;
 	
+	// Joan
 	public String modelo6 = "AMD Ryzen 9 5900X";
+	public double precio6 = 228.5;
+	public String fabricante6 = "AMD";
+	public String series6 = "AMD Ryzen 9";
+	public int nucleos6 = 12;
+	public int hilos6 = 24;
+	public double velocidad6 = 3.7;
+	public char video6 = 0;
+	
+	// Rosa
 	public String modelo7 = "Intel Pentium Gold 6500";
 	public String modelo8 = "Intel Core Ultra 7 265KF";
+	
+	// Wilfredo
 	public String modelo9 = "AMD Ryzen 5 9600X";
 	public String modelo10 = "AMD Ryzen 9 9950X3D";
+
+	// Obsequios
+	public static String obs1 = "";
+	public static String obs2 = "";
+	public static String obs3 = "";
 	
 	/**
 	 * Launch the application.

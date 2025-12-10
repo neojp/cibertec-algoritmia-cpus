@@ -50,7 +50,7 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 			getContentPane().add(lblObs1);
 		}
 		{
-			txtObs1 = new JTextField();
+			txtObs1 = new JTextField("" + Principal.obs1);
 			lblObs1.setLabelFor(txtObs1);
 			txtObs1.setBounds(140, 8, 129, 20);
 			getContentPane().add(txtObs1);
@@ -62,7 +62,7 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 			getContentPane().add(lblObs2);
 		}
 		{
-			txtObs2 = new JTextField();
+			txtObs2 = new JTextField("" + Principal.obs2);
 			lblObs2.setLabelFor(txtObs2);
 			txtObs2.setColumns(10);
 			txtObs2.setBounds(140, 36, 129, 20);
@@ -74,7 +74,7 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 			getContentPane().add(lblObs3);
 		}
 		{
-			txtObs3 = new JTextField();
+			txtObs3 = new JTextField("" + Principal.obs3);
 			lblObs3.setLabelFor(txtObs3);
 			txtObs3.setColumns(10);
 			txtObs3.setBounds(140, 64, 129, 20);
@@ -104,9 +104,12 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 	}
 	protected void actionPerformedBtnAceptar(ActionEvent e) {
 		// actualizar obsequio1, obsequio2, obsequio3
-//		obsequio1 = txtObs1.getText();
-//		obsequio2 = txtObs2.getText();
-//		obsequio3 = txtObs3.getText();
+		String obsequio1 = txtObs1.getText();
+		String obsequio2 = txtObs2.getText();
+		String obsequio3 = txtObs3.getText();
+		Principal.obs1 = obsequio1;
+		Principal.obs2 = obsequio2;
+		Principal.obs3 = obsequio3;
 		dispose();
 	}
 	protected void actionPerformedBtnCancelar(ActionEvent e) {

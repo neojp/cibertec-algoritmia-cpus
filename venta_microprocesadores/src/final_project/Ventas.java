@@ -84,6 +84,7 @@ public class Ventas extends JDialog implements ActionListener {
 		getContentPane().add(cboModelo);
 		
 		btnVender = new JButton("Vender");
+		btnVender.addActionListener(this);
 		btnVender.setBounds(314, 25, 89, 23);
 		getContentPane().add(btnVender);
 		
@@ -100,11 +101,20 @@ public class Ventas extends JDialog implements ActionListener {
 		scp.setViewportView(txtS);
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnVender) {
+			actionPerformedBtnVender(e);
+		}
 		if (e.getSource() == btnCerrar) {
 			actionPerformedBtnCerrar(e);
 		}
 	}
 	protected void actionPerformedBtnCerrar(ActionEvent e) 
 	{dispose();
+	}
+	protected void actionPerformedBtnVender(ActionEvent e) {
+		int modelo = cboModelo.getSelectedIndex();
+		switch (modelo) {
+			
+		}
 	}
 }

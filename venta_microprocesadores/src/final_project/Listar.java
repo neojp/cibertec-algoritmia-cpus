@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Field;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
@@ -82,6 +83,7 @@ public class Listar extends JDialog implements ActionListener {
 		df.setRoundingMode(RoundingMode.HALF_UP);
 
 		txtS.setText("LISTADO DE MICROPROCESADORES \n\n");
+		
 		txtS.append("Nombre: " + princ.modelo1 + "\n");
 		txtS.append("Precio: \n");
 		txtS.append("Fabricante: \n");
@@ -110,12 +112,12 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: " + princ.modelo4 + "\n");
-		txtS.append("Precio: $" + df.format(princ.precio4) + "\n");
-		txtS.append("Fabricante: " + princ.fabricante4 + "\n");
-		txtS.append("Número de Núcleos: " + princ.nucleos4 + "\n");
-		txtS.append("Número de Hilos: " + princ.hilos4 + "\n");
-		txtS.append("Velocidad de Núcleos: " + princ.velocidad4 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: " + (princ.video4 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Precio: \n");
+		txtS.append("Fabricante: \n");
+		txtS.append("Número de Núcleos: \n");
+		txtS.append("Número de Hilos: \n");
+		txtS.append("Velocidad de Núcleos: \n");
+		txtS.append("Tarjeta de Video Integrada: \n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: " + princ.modelo5 + "\n");
@@ -128,12 +130,12 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: " + princ.modelo6 + "\n");
-		txtS.append("Precio: \n");
-		txtS.append("Fabricante: \n");
-		txtS.append("Número de Núcleos: \n");
-		txtS.append("Número de Hilos: \n");
-		txtS.append("Velocidad de Núcleos: \n");
-		txtS.append("Tarjeta de Video Integrada: \n");
+		txtS.append("Precio: $" + df.format(princ.precio6) + "\n");
+		txtS.append("Fabricante: " + princ.fabricante6 + "\n");
+		txtS.append("Número de Núcleos: " + princ.nucleos6 + "\n");
+		txtS.append("Número de Hilos: " + princ.hilos6 + "\n");
+		txtS.append("Velocidad de Núcleos: " + princ.velocidad6 + "Ghz" + "\n");
+		txtS.append("Tarjeta de Video Integrada: " + (princ.video6 == 1 ? "Si" : "No") + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: " + princ.modelo7 + "\n");
