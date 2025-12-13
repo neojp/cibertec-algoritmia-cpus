@@ -152,17 +152,16 @@ public class Consulta extends JDialog implements ActionListener {
 		
 		cboModelo = new JComboBox<String>();
 		cboModelo.setBounds(154, 6, 270, 22);
-		Principal princ = new Principal();
-		cboModelo.addItem(princ.modelo1);
-		cboModelo.addItem(princ.modelo2);
-		cboModelo.addItem(princ.modelo3);
-		cboModelo.addItem(princ.modelo4);
-		cboModelo.addItem(princ.modelo5);
-		cboModelo.addItem(princ.modelo6);
-		cboModelo.addItem(princ.modelo7);
-		cboModelo.addItem(princ.modelo8);
-		cboModelo.addItem(princ.modelo9);
-		cboModelo.addItem(princ.modelo10);
+		cboModelo.addItem(Principal.modelo1);
+		cboModelo.addItem(Principal.modelo2);
+		cboModelo.addItem(Principal.modelo3);
+		cboModelo.addItem(Principal.modelo4);
+		cboModelo.addItem(Principal.modelo5);
+		cboModelo.addItem(Principal.modelo6);
+		cboModelo.addItem(Principal.modelo7);
+		cboModelo.addItem(Principal.modelo8);
+		cboModelo.addItem(Principal.modelo9);
+		cboModelo.addItem(Principal.modelo10);
 		getContentPane().add(cboModelo);
 
 	}

@@ -30,46 +30,111 @@ public class Principal extends JFrame implements ActionListener {
 	private JMenuItem mntmConfObseq;
 	private JMenuItem mntmAcerca;
 	
-	// información de microprocesadores:
-	// braulio
-	public String modelo1 = "AMD Ryzen 7 5700X";
-	public String modelo2 = "Intel Core i5-11400F";
+	// Información de microprocesadores:
+
+	// Braulio
+	public static String modelo1 = "AMD Ryzen 7 5700X";
+	public static double precio1 = 0;
+	public static String fabricante1 = "";
+	public static String series1 = "";
+	public static int nucleos1 = 0;
+	public static int hilos1 = 0;
+	public static double velocidad1 = 0.0;
+	public static char video1 = 0;
+	
+	// Braulio
+	public static String modelo2 = "Intel Core i5-11400F";
+	public static double precio2 = 0;
+	public static String fabricante2 = "";
+	public static String series2 = "";
+	public static int nucleos2 = 0;
+	public static int hilos2 = 0;
+	public static double velocidad2 = 0.0;
+	public static char video2 = 0;
 	
 	// Donnie
-	public String modelo3 = "Intel Core i5-14600K";
+	public static String modelo3 = "Intel Core i5-14600K";
+	public static double precio3 = 0;
+	public static String fabricante3 = "";
+	public static String series3 = "";
+	public static int nucleos3 = 0;
+	public static int hilos3 = 0;
+	public static double velocidad3 = 0.0;
+	public static char video3 = 0;
 	
 	// Donnie
-	public String modelo4 = "Intel Core i9-12900KF";
+	public static String modelo4 = "Intel Core i9-12900KF";
+	public static double precio4 = 0;
+	public static String fabricante4 = "";
+	public static String series4 = "";
+	public static int nucleos4 = 0;
+	public static int hilos4 = 0;
+	public static double velocidad4 = 0.0;
+	public static char video4 = 0;
 	
 	// Joan
-	public String modelo5 = "AMD Ryzen 7 9800X3D";
-	public double precio5 = 449;
-	public String fabricante5 = "AMD";
-	public String series5 = "AMD Ryzen 7";
-	public int nucleos5 = 8;
-	public int hilos5 = 16;
-	public double velocidad5 = 4.7;
-	public char video5 = 1;
+	public static String modelo5 = "AMD Ryzen 7 9800X3D";
+	public static double precio5 = 449;
+	public static String fabricante5 = "AMD";
+	public static String series5 = "AMD Ryzen 7";
+	public static int nucleos5 = 8;
+	public static int hilos5 = 16;
+	public static double velocidad5 = 4.7;
+	public static char video5 = 1;
 	
 	// Joan
-	public String modelo6 = "AMD Ryzen 9 5900X";
-	public double precio6 = 228.5;
-	public String fabricante6 = "AMD";
-	public String series6 = "AMD Ryzen 9";
-	public int nucleos6 = 12;
-	public int hilos6 = 24;
-	public double velocidad6 = 3.7;
-	public char video6 = 0;
+	public static String modelo6 = "AMD Ryzen 9 5900X";
+	public static double precio6 = 228.5;
+	public static String fabricante6 = "AMD";
+	public static String series6 = "AMD Ryzen 9";
+	public static int nucleos6 = 12;
+	public static int hilos6 = 24;
+	public static double velocidad6 = 3.7;
+	public static char video6 = 0;
 	
 	// Rosa
-	public String modelo7 = "Intel Pentium Gold 6500";
-	public String modelo8 = "Intel Core Ultra 7 265KF";
+	public static String modelo7 = "Intel Pentium Gold 6500";
+	public static double precio7 = 0;
+	public static String fabricante7 = "";
+	public static String series7 = "";
+	public static int nucleos7 = 0;
+	public static int hilos7 = 0;
+	public static double velocidad7 = 0.0;
+	public static char video7 = 0;
+
+	// Rosa
+	public static String modelo8 = "Intel Core Ultra 7 265KF";
+	public static double precio8 = 0;
+	public static String fabricante8 = "";
+	public static String series8 = "";
+	public static int nucleos8 = 0;
+	public static int hilos8 = 0;
+	public static double velocidad8 = 0.0;
+	public static char video8 = 0;
 	
 	// Wilfredo
-	public String modelo9 = "AMD Ryzen 5 9600X";
-	public String modelo10 = "AMD Ryzen 9 9950X3D";
+	public static String modelo9 = "AMD Ryzen 5 9600X";
+	public static double precio9 = 0;
+	public static String fabricante9 = "";
+	public static String series9 = "";
+	public static int nucleos9 = 0;
+	public static int hilos9 = 0;
+	public static double velocidad9 = 0.0;
+	public static char video9 = 0;
+	
+	// Wilfredo
+	public static String modelo10 = "AMD Ryzen 9 9950X3D";
+	public static double precio10 = 0;
+	public static String fabricante10 = "";
+	public static String series10 = "";
+	public static int nucleos10 = 0;
+	public static int hilos10 = 0;
+	public static double velocidad10 = 0.0;
+	public static char video10 = 0;
+	
+	// Configuration: Descuentos (Wilfredo)
 
-	// Obsequios
+	// Configuracion: Obsequios (Joan)
 	public static String obs1 = "";
 	public static String obs2 = "";
 	public static String obs3 = "";
