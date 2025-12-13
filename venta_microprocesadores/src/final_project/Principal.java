@@ -135,9 +135,9 @@ public class Principal extends JFrame implements ActionListener {
 	// Configuration: Descuentos (Wilfredo)
 
 	// Configuracion: Obsequios (Joan)
-	public static String obs1 = "";
-	public static String obs2 = "";
-	public static String obs3 = "";
+	public static String obs1 = "Lapicero";
+	public static String obs2 = "Llavero";
+	public static String obs3 = "Memoria USB";
 	
 	/**
 	 * Launch the application.
