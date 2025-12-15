@@ -34,22 +34,22 @@ public class Principal extends JFrame implements ActionListener {
 
 	// Braulio
 	public static String modelo1 = "AMD Ryzen 7 5700X";
-	public static double precio1 = 0;
-	public static String fabricante1 = "";
-	public static String series1 = "";
-	public static int nucleos1 = 0;
-	public static int hilos1 = 0;
-	public static double velocidad1 = 0.0;
+	public static double precio1 = 207;
+	public static String fabricante1 = "AMD";
+	public static String series1 = "Ryzen 7";
+	public static int nucleos1 = 8;
+	public static int hilos1 = 16;
+	public static double velocidad1 = 3.4;
 	public static char video1 = 0;
 	
 	// Braulio
 	public static String modelo2 = "Intel Core i5-11400F";
-	public static double precio2 = 0;
-	public static String fabricante2 = "";
-	public static String series2 = "";
-	public static int nucleos2 = 0;
-	public static int hilos2 = 0;
-	public static double velocidad2 = 0.0;
+	public static double precio2 = 144;
+	public static String fabricante2 = "Intel";
+	public static String series2 = "11th Series";
+	public static int nucleos2 = 6;
+	public static int hilos2 = 12;
+	public static double velocidad2 = 2.6;
 	public static char video2 = 0;
 	
 	// Donnie
