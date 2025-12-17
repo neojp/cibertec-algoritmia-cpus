@@ -93,7 +93,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos1 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos1 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad1 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video1 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video1 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo2 + "\n");
@@ -102,7 +104,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos2 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos2 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad2 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video2 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video2 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 
 		txtS.append("Nombre: \t\t\t" + Principal.modelo3 + "\n");
@@ -111,7 +115,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos3 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos3 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad3 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video3 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video3 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 
 		txtS.append("Nombre: \t\t\t" + Principal.modelo4 + "\n");
@@ -120,7 +126,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos4 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos4 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad4 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video4 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video4 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo5 + "\n");
@@ -129,7 +137,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos5 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos5 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad5 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video5 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video5 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo6 + "\n");
@@ -138,7 +148,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos6 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos6 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad6 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video6 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video6 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo7 + "\n");
@@ -147,7 +159,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos7 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos7 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad7 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video7 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video7 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo8 + "\n");
@@ -156,7 +170,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos8 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos8 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad8 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video8 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video8 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo9 + "\n");
@@ -165,7 +181,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos9 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos9 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad9 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video9 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video9 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 		txtS.append("\n\n");
 		
 		txtS.append("Nombre: \t\t\t" + Principal.modelo10 + "\n");
@@ -174,7 +192,9 @@ public class Listar extends JDialog implements ActionListener {
 		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos10 + "\n");
 		txtS.append("Número de Hilos: \t\t" + Principal.hilos10 + "\n");
 		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad10 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t" + (Principal.video10 == 1 ? "Si" : "No") + "\n");
+		txtS.append("Tarjeta de Video Integrada: \t");
+		if (Principal.video10 == '1') txtS.append("Si" + "\n");
+		else txtS.append("No" + "\n");
 
 		// hacer scroll a la primera linea
 		txtS.setCaretPosition(0);
