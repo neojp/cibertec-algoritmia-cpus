@@ -40,7 +40,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos1 = 8;
 	public static int hilos1 = 16;
 	public static double velocidad1 = 3.4;
-	public static char video1 = 0;
+	public static char video1 = '0';
 	
 	// Braulio
 	public static String modelo2 = "Intel Core i5-11400F";
@@ -50,7 +50,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos2 = 6;
 	public static int hilos2 = 12;
 	public static double velocidad2 = 2.6;
-	public static char video2 = 0;
+	public static char video2 = '0';
 	
 	// Donnie
 	public static String modelo3 = "Intel Core i5-14600K";
@@ -60,7 +60,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos3 = 0;
 	public static int hilos3 = 0;
 	public static double velocidad3 = 0.0;
-	public static char video3 = 0;
+	public static char video3 = '0';
 	
 	// Donnie
 	public static String modelo4 = "Intel Core i9-12900KF";
@@ -70,7 +70,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos4 = 0;
 	public static int hilos4 = 0;
 	public static double velocidad4 = 0.0;
-	public static char video4 = 0;
+	public static char video4 = '0';
 	
 	// Joan
 	public static String modelo5 = "AMD Ryzen 7 9800X3D";
@@ -80,7 +80,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos5 = 8;
 	public static int hilos5 = 16;
 	public static double velocidad5 = 4.7;
-	public static char video5 = 1;
+	public static char video5 = '1';
 	
 	// Joan
 	public static String modelo6 = "AMD Ryzen 9 5900X";
@@ -90,7 +90,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos6 = 12;
 	public static int hilos6 = 24;
 	public static double velocidad6 = 3.7;
-	public static char video6 = 0;
+	public static char video6 = '0';
 	
 	// Rosa
 	public static String modelo7 = "Intel Pentium Gold 6500";
@@ -100,7 +100,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos7 = 0;
 	public static int hilos7 = 0;
 	public static double velocidad7 = 0.0;
-	public static char video7 = 0;
+	public static char video7 = '0';
 
 	// Rosa
 	public static String modelo8 = "Intel Core Ultra 7 265KF";
@@ -110,7 +110,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos8 = 0;
 	public static int hilos8 = 0;
 	public static double velocidad8 = 0.0;
-	public static char video8 = 0;
+	public static char video8 = '0';
 	
 	// Wilfredo
 	public static String modelo9 = "AMD Ryzen 5 9600X";
@@ -120,7 +120,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos9 = 0;
 	public static int hilos9 = 0;
 	public static double velocidad9 = 0.0;
-	public static char video9 = 0;
+	public static char video9 = '0';
 	
 	// Wilfredo
 	public static String modelo10 = "AMD Ryzen 9 9950X3D";
@@ -130,7 +130,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static int nucleos10 = 0;
 	public static int hilos10 = 0;
 	public static double velocidad10 = 0.0;
-	public static char video10 = 0;
+	public static char video10 = '0';
 	
 	// Configuration: Descuentos (Wilfredo)
 
