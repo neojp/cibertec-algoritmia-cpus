@@ -13,8 +13,10 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
-public class Consulta extends JDialog implements ActionListener {
+public class Consulta extends JDialog implements ActionListener, ItemListener {
 
 	private static final long serialVersionUID = 1L;
 	private JLabel lblModelo;
@@ -151,6 +153,7 @@ public class Consulta extends JDialog implements ActionListener {
 		getContentPane().add(btnCancel);
 		
 		cboModelo = new JComboBox<String>();
+		cboModelo.addItemListener(this);
 		cboModelo.setBounds(154, 6, 270, 22);
 		cboModelo.addItem(Principal.modelo1);
 		cboModelo.addItem(Principal.modelo2);
@@ -172,5 +175,110 @@ public class Consulta extends JDialog implements ActionListener {
 	}
 	protected void actionPerformedBtnCancel(ActionEvent e) {
 		dispose();
+	}
+	public void itemStateChanged(ItemEvent e) {
+		if (e.getSource() == cboModelo) {
+			itemStateChangedCboModelo(e);
+		}
+	}
+	protected void itemStateChangedCboModelo(ItemEvent e) {
+		if (e.getStateChange() == ItemEvent.SELECTED) {
+			fillInformation(cboModelo.getSelectedIndex());
+		}
+	}
+	
+	void fillInformation(int index) {
+		switch(index) {
+			case 0: 
+				txtFabricante.setText(Principal.fabricante1);
+				txtGraficos.setText(Principal.video1 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos1));
+				txtNucleos.setText(String.valueOf(Principal.nucleos1));
+				txtPrecio.setText("$ "+ Principal.precio1);
+				txtSerie.setText(Principal.series1);
+				txtVelNucleos.setText(Principal.velocidad1+" GHz");
+			break;
+			case 1: 
+				txtFabricante.setText(Principal.fabricante2);
+				txtGraficos.setText(Principal.video2 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos2));
+				txtNucleos.setText(String.valueOf(Principal.nucleos2));
+				txtPrecio.setText("$ "+ Principal.precio2);
+				txtSerie.setText(Principal.series2);
+				txtVelNucleos.setText(Principal.velocidad2+" GHz");
+			break;
+			case 2: 
+				txtFabricante.setText(Principal.fabricante3);
+				txtGraficos.setText(Principal.video3 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos3));
+				txtNucleos.setText(String.valueOf(Principal.nucleos3));
+				txtPrecio.setText("$ "+ Principal.precio3);
+				txtSerie.setText(Principal.series3);
+				txtVelNucleos.setText(Principal.velocidad3+" GHz");
+			break;
+			case 3: 
+				txtFabricante.setText(Principal.fabricante4);
+				txtGraficos.setText(Principal.video4 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos4));
+				txtNucleos.setText(String.valueOf(Principal.nucleos4));
+				txtPrecio.setText("$ "+ Principal.precio4);
+				txtSerie.setText(Principal.series4);
+				txtVelNucleos.setText(Principal.velocidad4+" GHz");
+			break;
+			case 4: 
+				txtFabricante.setText(Principal.fabricante5);
+				txtGraficos.setText(Principal.video5 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos5));
+				txtNucleos.setText(String.valueOf(Principal.nucleos5));
+				txtPrecio.setText("$ "+ Principal.precio5);
+				txtSerie.setText(Principal.series5);
+				txtVelNucleos.setText(Principal.velocidad5+" GHz");
+			break;
+			case 5: 
+				txtFabricante.setText(Principal.fabricante6);
+				txtGraficos.setText(Principal.video6 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos6));
+				txtNucleos.setText(String.valueOf(Principal.nucleos6));
+				txtPrecio.setText("$"+ Principal.precio6);
+				txtSerie.setText(Principal.series6);
+				txtVelNucleos.setText(Principal.velocidad6+" GHz");
+			break;
+			case 6: 
+				txtFabricante.setText(Principal.fabricante7);
+				txtGraficos.setText(Principal.video7 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos7));
+				txtNucleos.setText(String.valueOf(Principal.nucleos7));
+				txtPrecio.setText("$"+ Principal.precio7);
+				txtSerie.setText(Principal.series7);
+				txtVelNucleos.setText(Principal.velocidad7+" GHz");
+			break;
+			case 7: 
+				txtFabricante.setText(Principal.fabricante8);
+				txtGraficos.setText(Principal.video8 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos8));
+				txtNucleos.setText(String.valueOf(Principal.nucleos8));
+				txtPrecio.setText("$"+ Principal.precio8);
+				txtSerie.setText(Principal.series8);
+				txtVelNucleos.setText(Principal.velocidad8+" GHz");
+			break;
+			case 8: 
+				txtFabricante.setText(Principal.fabricante9);
+				txtGraficos.setText(Principal.video9 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos9));
+				txtNucleos.setText(String.valueOf(Principal.nucleos9));
+				txtPrecio.setText("$"+ Principal.precio9);
+				txtSerie.setText(Principal.series9);
+				txtVelNucleos.setText(Principal.velocidad9+" GHz");
+			break;
+			default : 
+				txtFabricante.setText(Principal.fabricante10);
+				txtGraficos.setText(Principal.video10 == 1 ? "incluye" : "no incluye");
+				txtHilos.setText(String.valueOf(Principal.hilos10));
+				txtNucleos.setText(String.valueOf(Principal.nucleos10));
+				txtPrecio.setText("$"+ Principal.precio10);
+				txtSerie.setText(Principal.series10);
+				txtVelNucleos.setText(Principal.velocidad10+" GHz");
+			break;
+		}
 	}
 }
