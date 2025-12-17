@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JFrame; //**** necesaro para referencia de super
+import javax.swing.JOptionPane;
 
 public class Descuento extends JDialog implements ActionListener {
 	private JLabel lblRangoDesc1;
@@ -110,18 +112,47 @@ public class Descuento extends JDialog implements ActionListener {
 		btnCancelarDesc.addActionListener(this);
 		btnCancelarDesc.setBounds(317, 58, 89, 23);
 		getContentPane().add(btnCancelarDesc);
+		
+		cargarPorcentajesIniciales(); // carga los porcentajes de la variables globales
 	}
+	
+	// Carga los valores actuales de las variables estáticas de Principal
+    private void cargarPorcentajesIniciales() {
+        // Asumiendo que 'Principal' es tu clase principal y tiene variables est�ticas
+        txtRango1.setText(String.valueOf(Principal.porcentaje1));
+        txtRango2.setText(String.valueOf(Principal.porcentaje2));
+        txtRango3.setText(String.valueOf(Principal.porcentaje3));
+        txtRango4.setText(String.valueOf(Principal.porcentaje4));
+    }
+    
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnCancelarDesc) {
-			actionPerformedBtnCancelarDesc(e);
-		}
 		if (e.getSource() == btnAceptarDesc) {
 			actionPerformedBtnAceptarDesc(e);
 		}
-	}
-	protected void actionPerformedBtnAceptarDesc(ActionEvent e) {
+		if (e.getSource() == btnCancelarDesc) {
+			actionPerformedBtnCancelarDesc(e);
+		}
 	}
 	protected void actionPerformedBtnCancelarDesc(ActionEvent e) {
-		dispose();
+		dispose(); //cierra el dialogo
+	}
+	protected void actionPerformedBtnAceptarDesc(ActionEvent e) {
+		try {
+            // Guardar los valores en las variables estáticas de Principal
+            Principal.porcentaje1 = Double.parseDouble(txtRango1.getText());
+            Principal.porcentaje2 = Double.parseDouble(txtRango2.getText());
+            Principal.porcentaje3 = Double.parseDouble(txtRango3.getText());
+            Principal.porcentaje4 = Double.parseDouble(txtRango4.getText());
+            
+            // Cerrar la caja de diálogo solo si el formato es correcto
+            this.dispose(); 
+            
+		} catch (NumberFormatException ex) {
+            // Manejo de error si se introduce un valor no numérico
+			JOptionPane.showMessageDialog(this,
+				"Error: Aseg�rese de ingresar números decimales válidos en todos los campos.",
+				"Error de Porcentaje para Descuento",
+				JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }
