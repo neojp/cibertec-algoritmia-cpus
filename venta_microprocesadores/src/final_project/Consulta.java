@@ -62,7 +62,7 @@ public class Consulta extends JDialog implements ActionListener, ItemListener {
 		setBounds(100, 100, 450, 321);
 		getContentPane().setLayout(null);
 		
-		lblModelo = new JLabel("Modelo:");
+		lblModelo = new JLabel("Modelo");
 		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblModelo.setBounds(10, 10, 134, 14);
 		getContentPane().add(lblModelo);
@@ -144,7 +144,7 @@ public class Consulta extends JDialog implements ActionListener, ItemListener {
 		lblGraficos.setBounds(10, 206, 134, 17);
 		getContentPane().add(lblGraficos);
 		
-		btnCancel = new JButton("CANCELAR");
+		btnCancel = new JButton("CERRAR");
 		btnCancel.addActionListener(this);
 		btnCancel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnCancel.setForeground(new Color(255, 255, 255));
@@ -191,93 +191,93 @@ public class Consulta extends JDialog implements ActionListener, ItemListener {
 		switch(index) {
 			case 0: 
 				txtFabricante.setText(Principal.fabricante1);
-				txtGraficos.setText(Principal.video1 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video1));
 				txtHilos.setText(String.valueOf(Principal.hilos1));
 				txtNucleos.setText(String.valueOf(Principal.nucleos1));
-				txtPrecio.setText("$ "+ Principal.precio1);
+				txtPrecio.setText(Principal.formatPrecio(Principal.precio1));
 				txtSerie.setText(Principal.series1);
-				txtVelNucleos.setText(Principal.velocidad1+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad1));
 			break;
 			case 1: 
 				txtFabricante.setText(Principal.fabricante2);
-				txtGraficos.setText(Principal.video2 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video2));
 				txtHilos.setText(String.valueOf(Principal.hilos2));
 				txtNucleos.setText(String.valueOf(Principal.nucleos2));
-				txtPrecio.setText("$ "+ Principal.precio2);
+				txtPrecio.setText(Principal.formatPrecio(Principal.precio2));
 				txtSerie.setText(Principal.series2);
-				txtVelNucleos.setText(Principal.velocidad2+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad2));
 			break;
 			case 2: 
 				txtFabricante.setText(Principal.fabricante3);
-				txtGraficos.setText(Principal.video3 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video3));
 				txtHilos.setText(String.valueOf(Principal.hilos3));
 				txtNucleos.setText(String.valueOf(Principal.nucleos3));
-				txtPrecio.setText("$ "+ Principal.precio3);
+				txtPrecio.setText(Principal.formatPrecio(Principal.precio3));
 				txtSerie.setText(Principal.series3);
-				txtVelNucleos.setText(Principal.velocidad3+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad3));
 			break;
 			case 3: 
 				txtFabricante.setText(Principal.fabricante4);
-				txtGraficos.setText(Principal.video4 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video4));
 				txtHilos.setText(String.valueOf(Principal.hilos4));
 				txtNucleos.setText(String.valueOf(Principal.nucleos4));
-				txtPrecio.setText("$ "+ Principal.precio4);
+				txtPrecio.setText(Principal.formatPrecio(Principal.precio4));
 				txtSerie.setText(Principal.series4);
-				txtVelNucleos.setText(Principal.velocidad4+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad4));
 			break;
 			case 4: 
 				txtFabricante.setText(Principal.fabricante5);
-				txtGraficos.setText(Principal.video5 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video5));
 				txtHilos.setText(String.valueOf(Principal.hilos5));
 				txtNucleos.setText(String.valueOf(Principal.nucleos5));
-				txtPrecio.setText("$ "+ Principal.precio5);
+				txtPrecio.setText(Principal.formatPrecio(Principal.precio5));
 				txtSerie.setText(Principal.series5);
-				txtVelNucleos.setText(Principal.velocidad5+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad5));
 			break;
 			case 5: 
 				txtFabricante.setText(Principal.fabricante6);
-				txtGraficos.setText(Principal.video6 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video6));
 				txtHilos.setText(String.valueOf(Principal.hilos6));
 				txtNucleos.setText(String.valueOf(Principal.nucleos6));
 				txtPrecio.setText("$"+ Principal.precio6);
 				txtSerie.setText(Principal.series6);
-				txtVelNucleos.setText(Principal.velocidad6+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad6));
 			break;
 			case 6: 
 				txtFabricante.setText(Principal.fabricante7);
-				txtGraficos.setText(Principal.video7 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video7));
 				txtHilos.setText(String.valueOf(Principal.hilos7));
 				txtNucleos.setText(String.valueOf(Principal.nucleos7));
 				txtPrecio.setText("$"+ Principal.precio7);
 				txtSerie.setText(Principal.series7);
-				txtVelNucleos.setText(Principal.velocidad7+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad7));
 			break;
 			case 7: 
 				txtFabricante.setText(Principal.fabricante8);
-				txtGraficos.setText(Principal.video8 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video8));
 				txtHilos.setText(String.valueOf(Principal.hilos8));
 				txtNucleos.setText(String.valueOf(Principal.nucleos8));
 				txtPrecio.setText("$"+ Principal.precio8);
 				txtSerie.setText(Principal.series8);
-				txtVelNucleos.setText(Principal.velocidad8+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad8));
 			break;
 			case 8: 
 				txtFabricante.setText(Principal.fabricante9);
-				txtGraficos.setText(Principal.video9 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video9));
 				txtHilos.setText(String.valueOf(Principal.hilos9));
 				txtNucleos.setText(String.valueOf(Principal.nucleos9));
 				txtPrecio.setText("$"+ Principal.precio9);
 				txtSerie.setText(Principal.series9);
-				txtVelNucleos.setText(Principal.velocidad9+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad9));
 			break;
 			default : 
 				txtFabricante.setText(Principal.fabricante10);
-				txtGraficos.setText(Principal.video10 == 1 ? "incluye" : "no incluye");
+				txtGraficos.setText(Principal.formatVideo(Principal.video10));
 				txtHilos.setText(String.valueOf(Principal.hilos10));
 				txtNucleos.setText(String.valueOf(Principal.nucleos10));
 				txtPrecio.setText("$"+ Principal.precio10);
 				txtSerie.setText(Principal.series10);
-				txtVelNucleos.setText(Principal.velocidad10+" GHz");
+				txtVelNucleos.setText(Principal.formatGhz(Principal.velocidad10));
 			break;
 		}
 	}
