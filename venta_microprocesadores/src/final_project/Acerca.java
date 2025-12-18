@@ -1,6 +1,7 @@
 package final_project;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -13,6 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.JSeparator;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class Acerca extends JDialog implements ActionListener {
 	private JLabel lblAutores;
@@ -46,40 +48,49 @@ public class Acerca extends JDialog implements ActionListener {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		{
-			lblMicroprocesadores = new JLabel("Microprocesadores");
-			lblMicroprocesadores.setFont(new Font("Tahoma", Font.BOLD, 24));
-			lblMicroprocesadores.setBounds(101, 10, 237, 46);
+			lblMicroprocesadores = new JLabel("Tienda de Microprocesadores 1.0");
+			lblMicroprocesadores.setHorizontalAlignment(SwingConstants.CENTER);
+			lblMicroprocesadores.setFont(new Font("Tahoma", Font.BOLD, 20));
+			lblMicroprocesadores.setBounds(10, 11, 418, 46);
 			getContentPane().add(lblMicroprocesadores);
 		}
 
 		lblAutores = new JLabel("Autores");
+		lblAutores.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAutores.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblAutores.setBounds(180, 67, 79, 14);
+		lblAutores.setBounds(180, 68, 79, 14);
 		getContentPane().add(lblAutores);
 
 		lblBraulio = new JLabel("Braulio Saloma");
-		lblBraulio.setBounds(168, 92, 102, 14);
+		lblBraulio.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBraulio.setBounds(168, 93, 102, 14);
 		getContentPane().add(lblBraulio);
 
 		lblDonnie = new JLabel("Donnie Ochoa");
-		lblDonnie.setBounds(168, 117, 102, 14);
+		lblDonnie.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDonnie.setBounds(168, 118, 102, 14);
 		getContentPane().add(lblDonnie);
 
 		lblJoan = new JLabel("Joan Piedra");
-		lblJoan.setBounds(180, 142, 79, 14);
+		lblJoan.setHorizontalAlignment(SwingConstants.CENTER);
+		lblJoan.setBounds(180, 143, 79, 14);
 		getContentPane().add(lblJoan);
 
 		lblRosa = new JLabel("Rosa Truyenque");
-		lblRosa.setBounds(170, 167, 99, 14);
+		lblRosa.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRosa.setBounds(170, 168, 99, 14);
 		getContentPane().add(lblRosa);
 
 		lblWilfredo = new JLabel("Wilfredo Pari");
-		lblWilfredo.setBounds(177, 192, 85, 14);
+		lblWilfredo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblWilfredo.setBounds(177, 193, 85, 14);
 		getContentPane().add(lblWilfredo);
 
 		btnCerrar = new JButton("Cerrar");
+		btnCerrar.setBackground(new Color(128, 64, 64));
+		btnCerrar.setForeground(new Color(255, 255, 255));
 		btnCerrar.addActionListener(this);
-		btnCerrar.setBounds(168, 217, 89, 23);
+		btnCerrar.setBounds(175, 218, 89, 23);
 		getContentPane().add(btnCerrar);
 
 		separator = new JSeparator();
