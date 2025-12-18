@@ -61,7 +61,7 @@ public class Modificar extends JDialog implements ActionListener {
 		setBounds(100, 100, 450, 321);
 		getContentPane().setLayout(null);
 		
-		lblModelo = new JLabel("Modelo:");
+		lblModelo = new JLabel("Modelo");
 		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblModelo.setBounds(10, 10, 134, 14);
 		getContentPane().add(lblModelo);
@@ -136,7 +136,7 @@ public class Modificar extends JDialog implements ActionListener {
 		lblGraficosIntegrados.setBounds(10, 206, 134, 17);
 		getContentPane().add(lblGraficosIntegrados);
 		
-		btnCancelar = new JButton("CANCELAR");
+		btnCancelar = new JButton("CERRAR");
 		btnCancelar.addActionListener(this);
 		btnCancelar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnCancelar.setBackground(new Color(128, 64, 64));
@@ -145,6 +145,7 @@ public class Modificar extends JDialog implements ActionListener {
 		getContentPane().add(btnCancelar);
 		
 		cboModelo = new JComboBox<String>();
+		cboModelo.addActionListener(this);
 		cboModelo.setBounds(154, 6, 270, 22);
 		cboModelo.addItem(Principal.modelo1);
 		cboModelo.addItem(Principal.modelo2);
@@ -159,6 +160,7 @@ public class Modificar extends JDialog implements ActionListener {
 		getContentPane().add(cboModelo);
 		
 		btnGuardar = new JButton("GUARDAR");
+		btnGuardar.addActionListener(this);
 		btnGuardar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnGuardar.setBackground(new Color(0, 64, 128));
 		btnGuardar.setForeground(new Color(255, 255, 255));
@@ -167,11 +169,34 @@ public class Modificar extends JDialog implements ActionListener {
 
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboModelo) {
+			actionPerformedCboModelo(e);
+		}
+		if (e.getSource() == btnGuardar) {
+			actionPerformedBtnGuardar(e);
+		}
 		if (e.getSource() == btnCancelar) {
 			actionPerformedBtnCancel(e);
 		}
 	}
 	protected void actionPerformedBtnCancel(ActionEvent e) {
 		dispose();
+	}
+	
+	protected void actionPerformedBtnGuardar(ActionEvent e) {
+		// 1. obtener los valores de todos los campos
+		// 2. validar campos si estan vacios
+		// 3. validar campos numericos (precio, nucleos, hilos, velocidad)
+		// 4. validar campos char (video)
+		// 5. actualizar las variables globales en Principal
+		// 6. cerrar ventana
+		dispose();
+	}
+	
+	// se activa al cambiar el valor del combobox
+	protected void actionPerformedCboModelo(ActionEvent e) {
+		// 1. obtener datos del modelo
+		// 2. actualizar los campos editables con las variables globales en Principal
+		// 3. usar codigo personalizado para el variable video que es char
 	}
 }
