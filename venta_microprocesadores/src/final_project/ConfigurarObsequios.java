@@ -116,11 +116,22 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 		dispose();
 	}
 	
-	// validar si los campos txtObs1, txtObs2, txtObs3 estan vacíos
+	// validar si los campos txtObs1, txtObs2, txtObs3 estan vacíos o son números
 	private boolean validarFormulario() {
+		String obs1 = txtObs1.getText().trim();
+		String obs2 = txtObs2.getText().trim();
+		String obs3 = txtObs3.getText().trim();
+		
+		System.out.println(obs1.matches("[0-9]+"));
+
 		try {
-			if (txtObs1.getText().trim().isEmpty() || txtObs2.getText().trim().isEmpty() || txtObs3.getText().trim().isEmpty()) {
+			// validar si los campos estan vacíos 
+			if (obs1.isEmpty() || obs2.isEmpty() || obs3.isEmpty()) {
 				throw new Exception("Campo no puede estar vacío");
+			}
+			// validar si los campos son números
+			if (obs1.matches("[0-9]+") || obs2.matches("[0-9]+") || obs3.matches("[0-9]+")) {
+				throw new Exception("Campo no puede ser un número");
 			}
 		} catch(Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage(), "Error de validación", JOptionPane.ERROR_MESSAGE);
