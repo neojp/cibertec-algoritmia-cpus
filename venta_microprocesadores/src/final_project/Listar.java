@@ -91,8 +91,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos1);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos1);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad1 + " Ghz");
-		if (Principal.video1 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video1 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo2);
@@ -101,8 +101,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos2);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos2);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad2 + " Ghz");
-		if (Principal.video2 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video2 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo3);
@@ -111,8 +111,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos3);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos3);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad3 + " Ghz");
-		if (Principal.video3 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video3 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo4);
@@ -121,8 +121,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos4);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos4);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad4 + " Ghz");
-		if (Principal.video4 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video4 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo5);
@@ -131,8 +131,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos5);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos5);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad5 + " Ghz");
-		if (Principal.video5 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video5 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo6);
@@ -141,8 +141,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos6);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos6);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad6 + " Ghz");
-		if (Principal.video6 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video6 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo7);
@@ -151,8 +151,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos7);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos7);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad7 + " Ghz");
-		if (Principal.video7 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video7 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo8);
@@ -161,8 +161,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos8);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos8);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad8 + " Ghz");
-		if (Principal.video8 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video8 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo9);
@@ -171,8 +171,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos9);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos9);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad9 + " Ghz");
-		if (Principal.video9 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video9 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 		imprimir("\n");
 		
 		imprimir("Nombre \t\t\t\t : " + Principal.modelo10);
@@ -181,8 +181,8 @@ public class Listar extends JDialog implements ActionListener {
 		imprimir("Número de Núcleos \t\t : " + Principal.nucleos10);
 		imprimir("Número de Hilos \t\t : " + Principal.hilos10);
 		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad10 + " Ghz");
-		if (Principal.video10 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
-		else imprimir("Tarjeta de Video Integrada \t : No");
+		if (Principal.video10 == '1') imprimir("Tarjeta de Video Integrada \t : Incluye");
+		else imprimir("Tarjeta de Video Integrada \t : No Incluye");
 
 		// hacer scroll a la primera linea
 		txtS.setCaretPosition(0);
