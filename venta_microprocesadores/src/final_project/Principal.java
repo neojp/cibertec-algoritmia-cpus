@@ -138,7 +138,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static double porcentaje1 = 7.5;  // Descuento para 1 a 5 unidades
 	public static double porcentaje2 = 10.0; // Descuento para 6 a 10 unidades
 	public static double porcentaje3 = 12.5; // Descuento para 11 a 15 unidades
-	public static double porcentaje4 = 15.0; // Descuento para m�s de 15 unidades
+	public static double porcentaje4 = 15.0; // Descuento para más de 15 unidades
 
 	// Configuracion: Obsequios (Joan)
 	public static String obsequio1 = "Lapicero";    // Obsequio para 1 unidad
