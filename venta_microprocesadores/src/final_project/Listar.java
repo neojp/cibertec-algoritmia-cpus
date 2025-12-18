@@ -81,7 +81,7 @@ public class Listar extends JDialog implements ActionListener {
 		dispose();
 	}
 	protected void actionPerformedBtnListar(ActionEvent e) {
-		// mostrar resultados
+		// mostrar reporte de procesadores
 		imprimir("LISTADO DE MICROPROCESADORES");
 		imprimir("");
 		
