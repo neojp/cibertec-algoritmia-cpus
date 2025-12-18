@@ -1,6 +1,7 @@
 package final_project;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -105,11 +106,15 @@ public class Descuento extends JDialog implements ActionListener {
 		
 		btnAceptarDesc = new JButton("Aceptar");
 		btnAceptarDesc.addActionListener(this);
+		btnAceptarDesc.setBackground(new Color(0, 64, 128));
+		btnAceptarDesc.setForeground(new Color(255, 255, 255));
 		btnAceptarDesc.setBounds(317, 26, 89, 23);
 		getContentPane().add(btnAceptarDesc);
 		
 		btnCancelarDesc = new JButton("Cancelar");
 		btnCancelarDesc.addActionListener(this);
+		btnCancelarDesc.setBackground(new Color(128, 64, 64));
+		btnCancelarDesc.setForeground(new Color(255, 255, 255));
 		btnCancelarDesc.setBounds(317, 58, 89, 23);
 		getContentPane().add(btnCancelarDesc);
 		

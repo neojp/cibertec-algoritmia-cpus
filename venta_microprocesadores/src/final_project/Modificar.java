@@ -139,8 +139,8 @@ public class Modificar extends JDialog implements ActionListener {
 		btnCancelar = new JButton("CANCELAR");
 		btnCancelar.addActionListener(this);
 		btnCancelar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnCancelar.setForeground(new Color(255, 255, 255));
 		btnCancelar.setBackground(new Color(128, 64, 64));
+		btnCancelar.setForeground(new Color(255, 255, 255));
 		btnCancelar.setBounds(10, 235, 197, 41);
 		getContentPane().add(btnCancelar);
 		
@@ -159,9 +159,9 @@ public class Modificar extends JDialog implements ActionListener {
 		getContentPane().add(cboModelo);
 		
 		btnGuardar = new JButton("GUARDAR");
-		btnGuardar.setForeground(Color.WHITE);
 		btnGuardar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnGuardar.setBackground(new Color(128, 64, 64));
+		btnGuardar.setBackground(new Color(0, 64, 128));
+		btnGuardar.setForeground(new Color(255, 255, 255));
 		btnGuardar.setBounds(227, 235, 197, 41);
 		getContentPane().add(btnGuardar);
 

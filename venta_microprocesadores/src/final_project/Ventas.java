@@ -1,5 +1,6 @@
 package final_project;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -63,7 +64,6 @@ public class Ventas extends JDialog implements ActionListener {
 		txtPrecio.setColumns(10);
 		
 		txtCantidad = new JTextField();
-		txtCantidad.setEditable(false);
 		txtCantidad.setBounds(100, 73, 148, 20);
 		getContentPane().add(txtCantidad);
 		txtCantidad.setColumns(10);
@@ -84,11 +84,15 @@ public class Ventas extends JDialog implements ActionListener {
 		
 		btnVender = new JButton("Vender");
 		btnVender.addActionListener(this);
+		btnVender.setBackground(new Color(0, 64, 128));
+		btnVender.setForeground(new Color(255, 255, 255));
 		btnVender.setBounds(314, 25, 89, 23);
 		getContentPane().add(btnVender);
 		
 		btnCerrar = new JButton("Cerrar ");
 		btnCerrar.addActionListener(this);
+		btnCerrar.setBackground(new Color(128, 64, 64));
+		btnCerrar.setForeground(new Color(255, 255, 255));
 		btnCerrar.setBounds(314, 51, 89, 23);
 		getContentPane().add(btnCerrar);
 		
