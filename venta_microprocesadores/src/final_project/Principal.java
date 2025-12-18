@@ -30,7 +30,7 @@ public class Principal extends JFrame implements ActionListener {
 	private JMenuItem mntmConfObseq;
 	private JMenuItem mntmAcerca;
 	
-	// Información de microprocesadores:
+	// InformaciÃ³n de microprocesadores:
 
 	// Braulio
 	public static String modelo1 = "AMD Ryzen 7 5700X";
@@ -54,22 +54,22 @@ public class Principal extends JFrame implements ActionListener {
 	
 	// Donnie
 	public static String modelo3 = "Intel Core i5-14600K";
-	public static double precio3 = 0;
-	public static String fabricante3 = "";
-	public static String series3 = "";
-	public static int nucleos3 = 0;
-	public static int hilos3 = 0;
-	public static double velocidad3 = 0.0;
-	public static char video3 = '0';
+	public static double precio3 = 175;
+	public static String fabricante3 = "Intel";
+	public static String series3 = "14th Series";
+	public static int nucleos3 = 14;
+	public static int hilos3 = 20;
+	public static double velocidad3 = 5.3;
+	public static char video3 = '1';
 	
 	// Donnie
 	public static String modelo4 = "Intel Core i9-12900KF";
-	public static double precio4 = 0;
-	public static String fabricante4 = "";
-	public static String series4 = "";
-	public static int nucleos4 = 0;
-	public static int hilos4 = 0;
-	public static double velocidad4 = 0.0;
+	public static double precio4 = 280;
+	public static String fabricante4 = "Intel";
+	public static String series4 = "12th Series";
+	public static int nucleos4 = 16;
+	public static int hilos4 = 24;
+	public static double velocidad4 = 5.2;
 	public static char video4 = '0';
 	
 	// Joan
@@ -138,7 +138,7 @@ public class Principal extends JFrame implements ActionListener {
 	public static double porcentaje1 = 7.5;  // Descuento para 1 a 5 unidades
 	public static double porcentaje2 = 10.0; // Descuento para 6 a 10 unidades
 	public static double porcentaje3 = 12.5; // Descuento para 11 a 15 unidades
-	public static double porcentaje4 = 15.0; // Descuento para m�s de 15 unidades
+	public static double porcentaje4 = 15.0; // Descuento para más de 15 unidades
 
 	// Configuracion: Obsequios (Joan)
 	public static String obs1 = "Lapicero";
@@ -201,7 +201,7 @@ public class Principal extends JFrame implements ActionListener {
 		mntmVender.addActionListener(this);
 		mnVentas.add(mntmVender);
 		
-		mnConfig = new JMenu("Configuracíón");
+		mnConfig = new JMenu("ConfiguracÃ­Ã³n");
 		mnBar.add(mnConfig);
 		
 		mntmConfDesc = new JMenuItem("Configurar descuentos");
@@ -225,7 +225,7 @@ public class Principal extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == mntmEdicion) {
-			actionPerformedMntmEdición(e);
+			actionPerformedMntmEdiciÃ³n(e);
 		}
 		if (e.getSource() == mntmConfDesc) {
 			actionPerformedMntmConfDesc(e);
@@ -290,10 +290,11 @@ public class Principal extends JFrame implements ActionListener {
 		desc.setModal(true);
 		desc.setVisible(true);
 	}
-	protected void actionPerformedMntmEdición(ActionEvent e) {
+	protected void actionPerformedMntmEdiciÃ³n(ActionEvent e) {
 		Modificar modif = new Modificar();
 		modif.setLocationRelativeTo(this);
 		modif.setModal(true);
 		modif.setVisible(true);
 	}
 }
+
