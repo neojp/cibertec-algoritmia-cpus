@@ -69,6 +69,7 @@ public class Ventas extends JDialog implements ActionListener {
 		txtCantidad.setColumns(10);
 		
 		cboModelo = new JComboBox<String>();
+		cboModelo.addActionListener(this);
 		cboModelo.setBounds(100, 21, 148, 22);
 		cboModelo.addItem(Principal.modelo1);
 		cboModelo.addItem(Principal.modelo2);
@@ -104,6 +105,9 @@ public class Ventas extends JDialog implements ActionListener {
 		scp.setViewportView(txtS);
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboModelo) {
+			actionPerformedCboModelo(e);
+		}
 		if (e.getSource() == btnVender) {
 			actionPerformedBtnVender(e);
 		}
@@ -111,13 +115,33 @@ public class Ventas extends JDialog implements ActionListener {
 			actionPerformedBtnCerrar(e);
 		}
 	}
-	protected void actionPerformedBtnCerrar(ActionEvent e) 
-	{dispose();
+	protected void actionPerformedBtnCerrar(ActionEvent e)  {
+		// cerrar ventana
+		dispose();
 	}
 	protected void actionPerformedBtnVender(ActionEvent e) {
+		// 1. leer datos del combobox y precio
+		// 2. validar que precio no este vacio
+		// 3. validar que precio sea un numero
+		// 4. leer datos de variables globales en Principal
+		// 5. calcular importe de compra
+		// 6. calcular importe de descuento
+		// 7. calcular importe a pagar
+		// 8. calcular obsequio
+		// 9. imprimir boleta de venta
+		// 10. incrementar contador de venta general
+		// 11. incrementar el importe total general acumulado
+		// 12. condicional si la venta general es 5, 10, 15, 20, ... n (var % 5 == 0)
+		// 13. si el condicional es true, calcular el porcentaje de cuota diaria
+		// 14. si el condicional es true, mostrar alerta
+
 		int modelo = cboModelo.getSelectedIndex();
 		switch (modelo) {
 			
 		}
+	}
+	protected void actionPerformedCboModelo(ActionEvent e) {
+		// 1. leer datos del combobox
+		// 2. actualizar precio con datos de variables globales en Principal
 	}
 }
