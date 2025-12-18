@@ -30,7 +30,7 @@ public class Principal extends JFrame implements ActionListener {
 	private JMenuItem mntmConfObseq;
 	private JMenuItem mntmAcerca;
 	
-	// InformaciÃ³n de microprocesadores:
+	// Información de microprocesadores:
 
 	// Braulio
 	public static String modelo1 = "AMD Ryzen 7 5700X";
@@ -141,9 +141,9 @@ public class Principal extends JFrame implements ActionListener {
 	public static double porcentaje4 = 15.0; // Descuento para más de 15 unidades
 
 	// Configuracion: Obsequios (Joan)
-	public static String obs1 = "Lapicero";
-	public static String obs2 = "Llavero";
-	public static String obs3 = "Memoria USB";
+	public static String obsequio1 = "Lapicero";    // Obsequio para 1 unidad
+	public static String obsequio2 = "Llavero";     // Obsequio para 2 a 5 unidades
+	public static String obsequio3 = "Memoria USB"; // Obsequio para 6 a más unidades
 	
 	/**
 	 * Launch the application.
@@ -201,7 +201,7 @@ public class Principal extends JFrame implements ActionListener {
 		mntmVender.addActionListener(this);
 		mnVentas.add(mntmVender);
 		
-		mnConfig = new JMenu("ConfiguracÃ­Ã³n");
+		mnConfig = new JMenu("Configuración");
 		mnBar.add(mnConfig);
 		
 		mntmConfDesc = new JMenuItem("Configurar descuentos");
@@ -225,7 +225,7 @@ public class Principal extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == mntmEdicion) {
-			actionPerformedMntmEdiciÃ³n(e);
+			actionPerformedMntmEdicion(e);
 		}
 		if (e.getSource() == mntmConfDesc) {
 			actionPerformedMntmConfDesc(e);
@@ -290,7 +290,7 @@ public class Principal extends JFrame implements ActionListener {
 		desc.setModal(true);
 		desc.setVisible(true);
 	}
-	protected void actionPerformedMntmEdiciÃ³n(ActionEvent e) {
+	protected void actionPerformedMntmEdicion(ActionEvent e) {
 		Modificar modif = new Modificar();
 		modif.setLocationRelativeTo(this);
 		modif.setModal(true);
