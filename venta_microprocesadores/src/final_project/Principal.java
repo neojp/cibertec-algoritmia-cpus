@@ -249,6 +249,7 @@ public class Principal extends JFrame implements ActionListener {
 			actionPerformedMntmSalir(e);
 		}
 	}
+
 	protected void actionPerformedMntmSalir(ActionEvent e) {
 		System.exit(0);
 	}
@@ -295,6 +296,19 @@ public class Principal extends JFrame implements ActionListener {
 		modif.setLocationRelativeTo(this);
 		modif.setModal(true);
 		modif.setVisible(true);
+	}
+	
+	static String formatGhz(double velocidad) {
+		return String.format("%.2f", velocidad) + " Ghz";
+	}
+
+	static String formatPrecio(double precio) {
+		return "$" + String.format("%.2f", precio);
+	}
+	
+	static String formatVideo(char video) {
+		if (video == '1') return "Incluye";
+		else return "No Incluye";
 	}
 }
 
