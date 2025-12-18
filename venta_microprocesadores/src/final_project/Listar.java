@@ -1,6 +1,7 @@
 package final_project;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 
@@ -41,31 +42,31 @@ public class Listar extends JDialog implements ActionListener {
 	 */
 	public Listar() {
 		setTitle("Listado de Microprocesadores");
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 520, 320);
 		getContentPane().setLayout(null);
-		{
-			JScrollPane scp = new JScrollPane();
-			scp.setBounds(10, 11, 414, 205);
-			getContentPane().add(scp);
-			{
-				txtS = new JTextArea();
-				txtS.setEditable(false);
-				txtS.setFont(new Font("Monospaced", Font.PLAIN, 12));
-				scp.setViewportView(txtS);
-			}
-		}
-		{
-			btnCerrar = new JButton("Cerrar");
-			btnCerrar.addActionListener(this);
-			btnCerrar.setBounds(113, 227, 89, 23);
-			getContentPane().add(btnCerrar);
-		}
-		{
-			btnListar = new JButton("Listar");
-			btnListar.addActionListener(this);
-			btnListar.setBounds(227, 227, 89, 23);
-			getContentPane().add(btnListar);
-		}
+		
+		JScrollPane scp = new JScrollPane();
+		scp.setBounds(10, 11, 484, 224);
+		getContentPane().add(scp);
+			
+		txtS = new JTextArea();
+		txtS.setEditable(false);
+		txtS.setFont(new Font("Monospaced", Font.PLAIN, 12));
+		scp.setViewportView(txtS);
+
+		btnCerrar = new JButton("Cerrar");
+		btnCerrar.addActionListener(this);
+		btnCerrar.setBackground(new Color(128, 64, 64));
+		btnCerrar.setForeground(new Color(255, 255, 255));
+		btnCerrar.setBounds(149, 246, 89, 23);
+		getContentPane().add(btnCerrar);
+
+		btnListar = new JButton("Listar");
+		btnListar.addActionListener(this);
+		btnListar.setBackground(new Color(0, 64, 128));
+		btnListar.setForeground(new Color(255, 255, 255));
+		btnListar.setBounds(263, 246, 89, 23);
+		getContentPane().add(btnListar);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -80,123 +81,114 @@ public class Listar extends JDialog implements ActionListener {
 		dispose();
 	}
 	protected void actionPerformedBtnListar(ActionEvent e) {
-		// formatear numeros enteros con 2 decimales
-		DecimalFormat df = new DecimalFormat("0.00");
-		df.setRoundingMode(RoundingMode.HALF_UP);
-
 		// mostrar resultados
-		txtS.setText("LISTADO DE MICROPROCESADORES \n\n");
+		imprimir("LISTADO DE MICROPROCESADORES");
+		imprimir("");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo1 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio1) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante1 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos1 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos1 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad1 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video1 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo1);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio1));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante1);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos1);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos1);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad1 + " Ghz");
+		if (Principal.video1 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo2 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio2) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante2 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos2 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos2 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad2 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video2 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo2);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio2));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante2);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos2);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos2);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad2 + " Ghz");
+		if (Principal.video2 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 
-		txtS.append("Nombre: \t\t\t" + Principal.modelo3 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio3) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante3 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos3 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos3 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad3 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video3 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo3);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio3));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante3);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos3);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos3);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad3 + " Ghz");
+		if (Principal.video3 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 
-		txtS.append("Nombre: \t\t\t" + Principal.modelo4 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio4) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante4 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos4 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos4 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad4 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video4 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo4);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio4));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante4);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos4);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos4);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad4 + " Ghz");
+		if (Principal.video4 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo5 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio5) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante5 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos5 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos5 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad5 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video5 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo5);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio5));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante5);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos5);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos5);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad5 + " Ghz");
+		if (Principal.video5 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo6 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio6) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante6 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos6 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos6 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad6 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video6 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo6);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio6));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante6);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos6);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos6);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad6 + " Ghz");
+		if (Principal.video6 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo7 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio7) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante7 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos7 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos7 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad7 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video7 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo7);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio7));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante7);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos7);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos7);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad7 + " Ghz");
+		if (Principal.video7 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo8 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio8) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante8 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos8 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos8 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad8 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video8 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo8);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio8));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante8);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos8);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos8);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad8 + " Ghz");
+		if (Principal.video8 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo9 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio9) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante9 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos9 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos9 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad9 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video9 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
-		txtS.append("\n\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo9);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio9));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante9);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos9);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos9);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad9 + " Ghz");
+		if (Principal.video9 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
+		imprimir("\n");
 		
-		txtS.append("Nombre: \t\t\t" + Principal.modelo10 + "\n");
-		txtS.append("Precio: \t\t\t$" + df.format(Principal.precio10) + "\n");
-		txtS.append("Fabricante: \t\t\t" + Principal.fabricante10 + "\n");
-		txtS.append("Número de Núcleos: \t\t" + Principal.nucleos10 + "\n");
-		txtS.append("Número de Hilos: \t\t" + Principal.hilos10 + "\n");
-		txtS.append("Velocidad de Núcleos: \t\t" + Principal.velocidad10 + "Ghz" + "\n");
-		txtS.append("Tarjeta de Video Integrada: \t");
-		if (Principal.video10 == '1') txtS.append("Si" + "\n");
-		else txtS.append("No" + "\n");
+		imprimir("Nombre \t\t\t\t : " + Principal.modelo10);
+		imprimir("Precio \t\t\t\t : $" + String.format("%.2f", Principal.precio10));
+		imprimir("Fabricante \t\t\t : " + Principal.fabricante10);
+		imprimir("Número de Núcleos \t\t : " + Principal.nucleos10);
+		imprimir("Número de Hilos \t\t : " + Principal.hilos10);
+		imprimir("Velocidad de Núcleos \t\t : " + Principal.velocidad10 + " Ghz");
+		if (Principal.video10 == '1') imprimir("Tarjeta de Video Integrada \t : Si");
+		else imprimir("Tarjeta de Video Integrada \t : No");
 
 		// hacer scroll a la primera linea
 		txtS.setCaretPosition(0);
+	}
+	
+	void imprimir(String cad) {
+		txtS.append(cad + "\n");
 	}
 }
