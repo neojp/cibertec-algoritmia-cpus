@@ -94,22 +94,22 @@ public class Principal extends JFrame implements ActionListener {
 	
 	// Rosa
 	public static String modelo7 = "Intel Pentium Gold 6500";
-	public static double precio7 = 0;
-	public static String fabricante7 = "";
-	public static String series7 = "";
-	public static int nucleos7 = 0;
-	public static int hilos7 = 0;
-	public static double velocidad7 = 0.0;
-	public static char video7 = '0';
+	public static double precio7 = 90;
+	public static String fabricante7 = "Intel";
+	public static String series7 = "10th Serie";
+	public static int nucleos7 = 2;
+	public static int hilos7 = 4;
+	public static double velocidad7 = 4.1;
+	public static char video7 = '1';
 
 	// Rosa
 	public static String modelo8 = "Intel Core Ultra 7 265KF";
-	public static double precio8 = 0;
-	public static String fabricante8 = "";
-	public static String series8 = "";
-	public static int nucleos8 = 0;
-	public static int hilos8 = 0;
-	public static double velocidad8 = 0.0;
+	public static double precio8 =240 ;
+	public static String fabricante8 = "Intel";
+	public static String series8 = "Core Ultra series 2";
+	public static int nucleos8 =20 ;
+	public static int hilos8 = 20;
+	public static double velocidad8 = 5.5;
 	public static char video8 = '0';
 	
 	// Wilfredo

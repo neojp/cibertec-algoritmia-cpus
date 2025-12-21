@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -59,18 +60,18 @@ public class Ventas extends JDialog implements ActionListener {
 		
 		txtPrecio = new JTextField();
 		txtPrecio.setEditable(false);
-		txtPrecio.setBounds(100, 48, 148, 20);
+		txtPrecio.setBounds(100, 48, 179, 20);
 		getContentPane().add(txtPrecio);
 		txtPrecio.setColumns(10);
 		
 		txtCantidad = new JTextField();
-		txtCantidad.setBounds(100, 73, 148, 20);
+		txtCantidad.setBounds(100, 73, 179, 20);
 		getContentPane().add(txtCantidad);
 		txtCantidad.setColumns(10);
 		
 		cboModelo = new JComboBox<String>();
 		cboModelo.addActionListener(this);
-		cboModelo.setBounds(100, 21, 148, 22);
+		cboModelo.setBounds(100, 21, 179, 22);
 		cboModelo.addItem(Principal.modelo1);
 		cboModelo.addItem(Principal.modelo2);
 		cboModelo.addItem(Principal.modelo3);
@@ -103,6 +104,11 @@ public class Ventas extends JDialog implements ActionListener {
 		
 		txtS = new JTextArea();
 		scp.setViewportView(txtS);
+		
+		//mostrar datos del primer microprocesador al cagar la interfase
+		//precio es double, se le  pone un artificio una cadena vacia
+		txtPrecio.setText(Principal.precio1+"");
+		
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == cboModelo) {
@@ -119,29 +125,120 @@ public class Ventas extends JDialog implements ActionListener {
 		// cerrar ventana
 		dispose();
 	}
-	protected void actionPerformedBtnVender(ActionEvent e) {
-		// 1. leer datos del combobox y precio
-		// 2. validar que precio no este vacio
-		// 3. validar que precio sea un numero
-		// 4. leer datos de variables globales en Principal
-		// 5. calcular importe de compra
-		// 6. calcular importe de descuento
-		// 7. calcular importe a pagar
-		// 8. calcular obsequio
-		// 9. imprimir boleta de venta
-		// 10. incrementar contador de venta general
-		// 11. incrementar el importe total general acumulado
-		// 12. condicional si la venta general es 5, 10, 15, 20, ... n (var % 5 == 0)
-		// 13. si el condicional es true, calcular el porcentaje de cuota diaria
-		// 14. si el condicional es true, mostrar alerta
-
-		int modelo = cboModelo.getSelectedIndex();
-		switch (modelo) {
-			
+	//declaracion de variables GLOBALES
+	int modelo,cantModelo;
+	double impCom,impDesc,impPag, precioSeleccionado;
+	String obsequio="",modeloSeleccionado;
+    
+	protected void actionPerformedBtnVender(ActionEvent e) 
+	
+	{ //Entrada de datos
+		leerModelo();
+		leerCantModelo();
+		
+		//Proceso
+		calcularImpCom();
+		calcularImpDesc();
+		calcularImpPag();
+		calcularObsequio();
+		//SR
+			mostrarResultados();
+					
+	}
+	 //metodo SIN VALOR DE RETORNO
+	//Entrada de datos
+	//método que lee modelo y asigna el indice a la variable
+	 void leerModelo() { modelo=cboModelo.getSelectedIndex();}
+		 //método que lee la cantidad de los modelos adquiridos
+	 void leerCantModelo() { cantModelo=Integer.parseInt(txtCantidad.getText());}
+	
+	 //proceso
+	  	 		  		
+	 void calcularImpCom() { 
+	switch (modelo) 
+	{	case 0:impCom=207*cantModelo;
+	           modeloSeleccionado=Principal.modelo1;
+               precioSeleccionado=Principal.precio1;break;
+	    case 1:impCom=144*cantModelo;
+			    modeloSeleccionado=Principal.modelo2;
+		        precioSeleccionado=Principal.precio2;break;
+	    case 2:impCom=175*cantModelo;
+			   modeloSeleccionado=Principal.modelo3;
+		       precioSeleccionado=Principal.precio3;break;
+	    case 3:impCom=280*cantModelo;
+			   modeloSeleccionado=Principal.modelo4;
+		       precioSeleccionado=Principal.precio4;break;
+	    case 4:impCom=449*cantModelo;
+			   modeloSeleccionado=Principal.modelo5;
+		       precioSeleccionado=Principal.precio5;break;
+	    case 5:impCom=228.5*cantModelo;
+	    	   modeloSeleccionado=Principal.modelo6;
+	           precioSeleccionado=Principal.precio6;break;
+	    case 6:impCom=90*cantModelo;
+	           modeloSeleccionado=Principal.modelo7;
+	           precioSeleccionado=Principal.precio7;break;
+	    case 7:impCom=240*cantModelo;
+	    	   modeloSeleccionado=Principal.modelo8;
+	           precioSeleccionado=Principal.precio8;break;
+	    case 8:impCom=195*cantModelo;
+	    	   modeloSeleccionado=Principal.modelo9;
+	           precioSeleccionado=Principal.precio9;break;
+	   	default:impCom=669*cantModelo;
+	   	        modeloSeleccionado=Principal.modelo10;
+	            precioSeleccionado=Principal.precio10;
+		break;
+	}
+	 }
+	 
+	 //Método que calcula y asigna el importe de descuento 
+	 void calcularImpDesc() 
+	 {if (cantModelo<=5) impDesc=0.075*impCom;	
+	 else if (cantModelo<=10) impDesc=0.10*impCom;
+	 else if (cantModelo<=15) impDesc=0.125*impCom;
+	 else impDesc=0.15*impCom;
+	 }
+	 
+	 //Método que calcula importe a pagar
+	 void calcularImpPag() 
+	 {impPag=impCom-impDesc;}
+	 
+	 //Método calcula obsequio
+	 void calcularObsequio()
+	 { if (cantModelo<2) obsequio=Principal.obsequio1;
+	   else if (cantModelo<=5) obsequio=Principal.obsequio2;
+	   else obsequio=Principal.obsequio3;}
+	 
+     //Método  que muestra los resultados
+	 void mostrarResultados()
+	 
+	 { txtS.setText("BOLETA DE VENTA "+" \n \n");
+	   imprimir("Modelo \t\t:"+modeloSeleccionado);
+	   imprimir("Precio \t\t:S/."+precioSeleccionado);
+	   imprimir("Cantidad \t\t:"+cantModelo);
+	   imprimir("Importe de Compra \t:S/."+impCom);
+	   imprimir("Importe de Desc. \t:S/."+impDesc);
+	   imprimir("Importe a Pagar \t:S/."+impPag);
+	   imprimir("Obsequio \t\t:"+ obsequio);
 		}
-	}
-	protected void actionPerformedCboModelo(ActionEvent e) {
-		// 1. leer datos del combobox
-		// 2. actualizar precio con datos de variables globales en Principal
-	}
-}
+	
+		void imprimir(String x) {txtS.append(x+" \n");}
+
+	protected void actionPerformedCboModelo(ActionEvent e)
+	{	int modelo = cboModelo.getSelectedIndex();
+	
+		switch (modelo)
+		{ case 0: txtPrecio.setText(Principal.precio1+"");break; 
+		  case 1: txtPrecio.setText(Principal.precio2+"");break;
+		  case 2: txtPrecio.setText(Principal.precio3+"");break;
+		  case 3: txtPrecio.setText(Principal.precio4+"");break;
+		  case 4: txtPrecio.setText(Principal.precio5+"");break;
+		  case 5: txtPrecio.setText(Principal.precio6+"");break;
+		  case 6: txtPrecio.setText(Principal.precio7+"");break;
+		  case 7: txtPrecio.setText(Principal.precio8+"");break;
+		  case 8: txtPrecio.setText(Principal.precio9+"");break;
+		  default:  txtPrecio.setText(Principal.precio10+"");break;
+		}
+		}
+				
+		}
+
