@@ -136,6 +136,8 @@ public class Ventas extends JDialog implements ActionListener {
 		leerModelo();
 		leerCantModelo();
 		
+		// TODO: validacion de cantidad por vacio y numero
+		
 		//Proceso
 		calcularImpCom();
 		calcularImpDesc();
