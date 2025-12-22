@@ -58,7 +58,7 @@ public class Consulta extends JDialog implements ActionListener, ItemListener {
 	 * Create the dialog.
 	 */
 	public Consulta() {
-		setTitle("Consultar");
+		setTitle("Consultar Microprocesador");
 		setBounds(100, 100, 450, 321);
 		getContentPane().setLayout(null);
 		

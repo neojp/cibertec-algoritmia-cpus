@@ -61,7 +61,7 @@ public class Modificar extends JDialog implements ActionListener {
 	 * Create the dialog.
 	 */
 	public Modificar() {
-		setTitle("Modificar");
+		setTitle("Modificar Microprocesador");
 		setBounds(100, 100, 450, 321);
 		getContentPane().setLayout(null);
 		
