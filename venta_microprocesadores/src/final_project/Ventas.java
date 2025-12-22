@@ -50,7 +50,7 @@ public class Ventas extends JDialog implements ActionListener {
 		lblModelo.setBounds(23, 25, 67, 14);
 		getContentPane().add(lblModelo);
 		
-		lblPrecio = new JLabel("Precio(S/)");
+		lblPrecio = new JLabel("Precio");
 		lblPrecio.setBounds(23, 51, 67, 14);
 		getContentPane().add(lblPrecio);
 		
@@ -107,7 +107,7 @@ public class Ventas extends JDialog implements ActionListener {
 		
 		//mostrar datos del primer microprocesador al cagar la interfase
 		//precio es double, se le  pone un artificio una cadena vacia
-		txtPrecio.setText(Principal.precio1+"");
+		txtPrecio.setText(Principal.formatPrecio(Principal.precio1));
 		
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -126,8 +126,8 @@ public class Ventas extends JDialog implements ActionListener {
 		dispose();
 	}
 	//declaracion de variables GLOBALES
-	int modelo,cantModelo;
-	double impCom,impDesc,impPag, precioSeleccionado;
+	int modelo,cantModelo,cantModeloTotal,contadorVentas=0;
+	double impCom,impDesc,impPag, precioSeleccionado,montoAcumTotal,cuotaDiaria = 5000;
 	String obsequio="",modeloSeleccionado;
     
 	protected void actionPerformedBtnVender(ActionEvent e) 
@@ -142,8 +142,12 @@ public class Ventas extends JDialog implements ActionListener {
 		calcularImpPag();
 		calcularObsequio();
 		//SR
-			mostrarResultados();
 					
+		montoAcumTotal+=impPag;
+		contadorVentas++;
+		
+			mostrarResultados();
+			alertaVentas();
 	}
 	 //metodo SIN VALOR DE RETORNO
 	//Entrada de datos
@@ -212,31 +216,43 @@ public class Ventas extends JDialog implements ActionListener {
 	 void mostrarResultados()
 	 
 	 { txtS.setText("BOLETA DE VENTA "+" \n \n");
-	   imprimir("Modelo \t\t:"+modeloSeleccionado);
-	   imprimir("Precio \t\t:S/."+precioSeleccionado);
-	   imprimir("Cantidad \t\t:"+cantModelo);
-	   imprimir("Importe de Compra \t:S/."+impCom);
-	   imprimir("Importe de Desc. \t:S/."+impDesc);
-	   imprimir("Importe a Pagar \t:S/."+impPag);
-	   imprimir("Obsequio \t\t:"+ obsequio);
+	   imprimir("Modelo \t\t: "+modeloSeleccionado);
+	   imprimir("Precio \t\t: "+Principal.formatPrecio(precioSeleccionado));
+	   imprimir("Cantidad \t\t: "+cantModelo);
+	   imprimir("Importe de Compra \t: "+Principal.formatPrecio(impCom));
+	   imprimir("Importe de Desc. \t: "+Principal.formatPrecio(impDesc));
+	   imprimir("Importe a Pagar \t: "+Principal.formatPrecio(impPag));
+	   imprimir("Obsequio \t\t: "+ obsequio);
 		}
 	
 		void imprimir(String x) {txtS.append(x+" \n");}
 
+		
+		void alertaVentas()
+		{if(contadorVentas%5==0)
+			JOptionPane.showMessageDialog(this,
+					"Venta Nro:"+contadorVentas+"\n"+
+			"Importe total general Acumulado: S/."+montoAcumTotal+"\n"+
+			"Porcentaje de cuota diaria:"+(montoAcumTotal/cuotaDiaria)*100+"%"+"\n",
+			"Reporte de ventas",
+			JOptionPane.INFORMATION_MESSAGE);
+			
+		}
+		
 	protected void actionPerformedCboModelo(ActionEvent e)
 	{	int modelo = cboModelo.getSelectedIndex();
 	
 		switch (modelo)
-		{ case 0: txtPrecio.setText(Principal.precio1+"");break; 
-		  case 1: txtPrecio.setText(Principal.precio2+"");break;
-		  case 2: txtPrecio.setText(Principal.precio3+"");break;
-		  case 3: txtPrecio.setText(Principal.precio4+"");break;
-		  case 4: txtPrecio.setText(Principal.precio5+"");break;
-		  case 5: txtPrecio.setText(Principal.precio6+"");break;
-		  case 6: txtPrecio.setText(Principal.precio7+"");break;
-		  case 7: txtPrecio.setText(Principal.precio8+"");break;
-		  case 8: txtPrecio.setText(Principal.precio9+"");break;
-		  default:  txtPrecio.setText(Principal.precio10+"");break;
+		{ case 0: txtPrecio.setText(Principal.formatPrecio(Principal.precio1));break; 
+		  case 1: txtPrecio.setText(Principal.formatPrecio(Principal.precio2));break;
+		  case 2: txtPrecio.setText(Principal.formatPrecio(Principal.precio3));break;
+		  case 3: txtPrecio.setText(Principal.formatPrecio(Principal.precio4));break;
+		  case 4: txtPrecio.setText(Principal.formatPrecio(Principal.precio5));break;
+		  case 5: txtPrecio.setText(Principal.formatPrecio(Principal.precio6));break;
+		  case 6: txtPrecio.setText(Principal.formatPrecio(Principal.precio7));break;
+		  case 7: txtPrecio.setText(Principal.formatPrecio(Principal.precio8));break;
+		  case 8: txtPrecio.setText(Principal.formatPrecio(Principal.precio9));break;
+		  default:  txtPrecio.setText(Principal.formatPrecio(Principal.precio10));break;
 		}
 		}
 				
