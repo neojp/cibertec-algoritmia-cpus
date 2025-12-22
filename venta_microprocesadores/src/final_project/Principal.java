@@ -114,23 +114,23 @@ public class Principal extends JFrame implements ActionListener {
 	
 	// Wilfredo
 	public static String modelo9 = "AMD Ryzen 5 9600X";
-	public static double precio9 = 0;
-	public static String fabricante9 = "";
-	public static String series9 = "";
-	public static int nucleos9 = 0;
-	public static int hilos9 = 0;
-	public static double velocidad9 = 0.0;
-	public static char video9 = '0';
+	public static double precio9 = 195;
+	public static String fabricante9 = "AMD";
+	public static String series9 = "Ryzen 5";
+	public static int nucleos9 = 6;
+	public static int hilos9 = 12;
+	public static double velocidad9 = 3.9;
+	public static char video9 = '1';
 	
 	// Wilfredo
 	public static String modelo10 = "AMD Ryzen 9 9950X3D";
-	public static double precio10 = 0;
-	public static String fabricante10 = "";
-	public static String series10 = "";
-	public static int nucleos10 = 0;
-	public static int hilos10 = 0;
-	public static double velocidad10 = 0.0;
-	public static char video10 = '0';
+	public static double precio10 = 669;
+	public static String fabricante10 = "AMD";
+	public static String series10 = "Ryzen 9";
+	public static int nucleos10 = 16;
+	public static int hilos10 = 32;
+	public static double velocidad10 = 3.9;
+	public static char video10 = '1';
 
 	// Ventas (Rosa)
 	public static int contadorVentas = 0;
