@@ -131,6 +131,11 @@ public class Principal extends JFrame implements ActionListener {
 	public static int hilos10 = 0;
 	public static double velocidad10 = 0.0;
 	public static char video10 = '0';
+
+	// Ventas (Rosa)
+	public static int contadorVentas = 0;
+	public static double montoAcumTotal;
+	public static double cuotaDiaria = 5000;
 	
 	// Configuration: Descuentos (Wilfredo)
 	// Variables globales para almacenar los porcentajes de descuento.
@@ -309,6 +314,10 @@ public class Principal extends JFrame implements ActionListener {
 	static String formatVideo(char video) {
 		if (video == '1') return "Incluye";
 		else return "No Incluye";
+	}
+	
+	static String formatPorcentaje(double porcentaje) {
+		return String.format("%.2f", porcentaje) + "%";
 	}
 }
 

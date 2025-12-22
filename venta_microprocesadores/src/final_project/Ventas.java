@@ -126,8 +126,8 @@ public class Ventas extends JDialog implements ActionListener {
 		dispose();
 	}
 	//declaracion de variables GLOBALES
-	int modelo,cantModelo,cantModeloTotal,contadorVentas=0;
-	double impCom,impDesc,impPag, precioSeleccionado,montoAcumTotal,cuotaDiaria = 5000;
+	int modelo,cantModelo,cantModeloTotal;
+	double impCom,impDesc,impPag, precioSeleccionado;
 	String obsequio="",modeloSeleccionado;
     
 	protected void actionPerformedBtnVender(ActionEvent e) 
@@ -143,8 +143,8 @@ public class Ventas extends JDialog implements ActionListener {
 		calcularObsequio();
 		//SR
 					
-		montoAcumTotal+=impPag;
-		contadorVentas++;
+		Principal.montoAcumTotal+=impPag;
+		Principal.contadorVentas++;
 		
 			mostrarResultados();
 			alertaVentas();
@@ -228,15 +228,18 @@ public class Ventas extends JDialog implements ActionListener {
 		void imprimir(String x) {txtS.append(x+" \n");}
 
 		
-		void alertaVentas()
-		{if(contadorVentas%5==0)
-			JOptionPane.showMessageDialog(this,
-					"Venta Nro:"+contadorVentas+"\n"+
-			"Importe total general Acumulado: S/."+montoAcumTotal+"\n"+
-			"Porcentaje de cuota diaria:"+(montoAcumTotal/cuotaDiaria)*100+"%"+"\n",
-			"Reporte de ventas",
-			JOptionPane.INFORMATION_MESSAGE);
-			
+		void alertaVentas() {
+			if(Principal.contadorVentas%5==0) {
+				String precio = Principal.formatPrecio(Principal.montoAcumTotal);
+				String porcentaje = Principal.formatPorcentaje(Principal.montoAcumTotal / Principal.cuotaDiaria * 100);
+				
+				JOptionPane.showMessageDialog(this,
+					"Venta Nro: "+Principal.contadorVentas+"\n"+
+					"Importe total general Acumulado: "+precio+"\n"+
+					"Porcentaje de cuota diaria: "+ porcentaje +"\n",
+					"Reporte de ventas",
+					JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		
 	protected void actionPerformedCboModelo(ActionEvent e)
