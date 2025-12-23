@@ -130,14 +130,34 @@ public class Ventas extends JDialog implements ActionListener {
 	double impCom,impDesc,impPag, precioSeleccionado;
 	String obsequio="",modeloSeleccionado;
     
-	protected void actionPerformedBtnVender(ActionEvent e) 
+	protected void actionPerformedBtnVender(ActionEvent e) {
 	
+     String textoCantidad = txtCantidad.getText().trim();
+        if (textoCantidad.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "El campo cantidad no puede estar vacío", "Error", JOptionPane.ERROR_MESSAGE);
+        txtCantidad.requestFocus();
+        return; // Detiene la ejecución
+    }
+    try {
+        // Intenta convertir el texto a número
+        cantModelo = Integer.parseInt(textoCantidad);
+        
+        // Validación adicional:no cero,negativo
+        if (cantModelo <= 0) {
+            JOptionPane.showMessageDialog(this, "La cantidad debe ser mayor a cero", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+    } catch (NumberFormatException ex) {
+        // Si no es un número , entra aquí
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese solo números en la cantidad", "Error", JOptionPane.ERROR_MESSAGE);
+        txtCantidad.requestFocus();
+        return;
+    }
+				
 	{ //Entrada de datos
 		leerModelo();
 		leerCantModelo();
-		
-		// TODO: validacion de cantidad por vacio y numero
-		
+				
 		//Proceso
 		calcularImpCom();
 		calcularImpDesc();
@@ -149,7 +169,7 @@ public class Ventas extends JDialog implements ActionListener {
 		Principal.contadorVentas++;
 		
 			mostrarResultados();
-			alertaVentas();
+			alertaVentas();}
 	}
 	 //metodo SIN VALOR DE RETORNO
 	//Entrada de datos
