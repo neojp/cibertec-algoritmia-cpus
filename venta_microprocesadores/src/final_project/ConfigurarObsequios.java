@@ -134,8 +134,6 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 		String obs2 = txtObs2.getText().trim();
 		String obs3 = txtObs3.getText().trim();
 		
-		System.out.println(obs1.matches("[0-9]+"));
-
 		try {
 			// validar si los campos estan vacíos 
 			if (obs1.isEmpty() || obs2.isEmpty() || obs3.isEmpty()) {
