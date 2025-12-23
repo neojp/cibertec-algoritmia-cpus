@@ -112,8 +112,20 @@ public class ConfigurarObsequios extends JDialog implements ActionListener {
 		// actualizar obsequios
 		actualizarObs();
 		
+		// mostrar alerta
+		mostrarAlerta();
+		
 		// cerrar ventana
 		dispose();
+	}
+
+	// mostrar mensaje de modificacion en un alerta
+	private void mostrarAlerta() {
+		JOptionPane.showMessageDialog(this,
+            "Datos modificados correctamente",
+            "Configurar Obsequios",
+            JOptionPane.INFORMATION_MESSAGE
+        );
 	}
 	
 	// validar si los campos txtObs1, txtObs2, txtObs3 estan vacíos o son números

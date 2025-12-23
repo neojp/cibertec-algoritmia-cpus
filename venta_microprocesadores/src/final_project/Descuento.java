@@ -149,15 +149,26 @@ public class Descuento extends JDialog implements ActionListener {
             Principal.porcentaje3 = Double.parseDouble(txtRango3.getText());
             Principal.porcentaje4 = Double.parseDouble(txtRango4.getText());
             
+            // mostrar alerta
+            mostrarAlerta();
+            
             // Cerrar la caja de diálogo solo si el formato es correcto
             this.dispose(); 
             
 		} catch (NumberFormatException ex) {
             // Manejo de error si se introduce un valor no numérico
 			JOptionPane.showMessageDialog(this,
-				"Error: Aseg�rese de ingresar números decimales válidos en todos los campos.",
+				"Error: Asegúrese de ingresar números decimales válidos en todos los campos.",
 				"Error de Porcentaje para Descuento",
 				JOptionPane.ERROR_MESSAGE);
 		}
+	}
+	// mostrar mensaje de modificacion en un alerta
+	private void mostrarAlerta() {
+		JOptionPane.showMessageDialog(this,
+            "Datos modificados correctamente",
+            "Configurar porcentaje de descuento",
+            JOptionPane.INFORMATION_MESSAGE
+        );
 	}
 }
