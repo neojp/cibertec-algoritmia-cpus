@@ -144,7 +144,7 @@ public class Modificar extends JDialog implements ActionListener {
 		getContentPane().add(btnCancelar);
 		
 		cboVideo = new JComboBox();
-		cboVideo.setModel(new DefaultComboBoxModel(new String[] {"Incluye", "No Incluye"}));
+		cboVideo.setModel(new DefaultComboBoxModel(new String[] {"No Incluye", "Incluye"}));
 		cboVideo.setBounds(154, 203, 270, 22);
 		getContentPane().add(cboVideo);
 		
